@@ -31,6 +31,7 @@ module spiking_network_top (
     wire delay_clk;
     wire input_ready_sync;
     wire [164*8-1:0] all_data_out;
+    wire debug_config_ready_sync;
     // all_data_out Assignments
     // output wire [161*8-1:0] all_data_out
     // all_data_out:
