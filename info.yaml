@@ -35,7 +35,6 @@ project:
     - "spiking_network_top.v"
     - "synchronizer.v"
     - "TwoLayerNetwork_debug.v"
-    - "weight_decoder.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
