@@ -61,7 +61,7 @@ module spi_slave (
 
 
     // MISO control and bit counter process
-    always @(negedge SCLK or posedge RESET or posedge SS) begin
+    always @(negedge SCLK or posedge RESET) begin //always @(negedge SCLK or posedge RESET or posedge SS) begin modified 10Sep2024
         if (RESET) begin
             // When RESET is high, reset MISO and bit counter
             MISO <= 1'b0;
