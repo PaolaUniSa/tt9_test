@@ -10,7 +10,6 @@ module InputCurrentCalculator #(
 );
     integer i;
     
-    reg signed [2+4:0] weight_array [0:M-1];
     reg signed [6-1:0] current_sum;
 
     // Combinational logic for current sum
