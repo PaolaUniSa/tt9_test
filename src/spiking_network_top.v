@@ -137,9 +137,9 @@ module spiking_network_top (
     // delays            = (24*8+8*2)*4= 832 bits (104 bytes) (from 60° to 163°) -- addr: [0x3B,0xA2] decimal:[59 - 162]
     // debug_config_in   = 8 bits in the 164° byte -- addr: 0xA3
 	assign input_spikes = all_data_out      [3*8-1 : 0];     // 3 bytes
-    assign decay = all_data_out             [4*8-1 : 3*8];   // 5:0 bits in the 4° byte
-    assign refractory_period = all_data_out [5*8-1 : 4*8];   // 5:0 bits in the 5° byte 
-    assign threshold = all_data_out         [6*8-1 : 5*8];   // 5:0 bits in the 6° byte
+	assign decay = all_data_out             [4*8-1-2 : 3*8];   // 5:0 bits in the 4° byte
+	assign refractory_period = all_data_out [5*8-1-2 : 4*8];   // 5:0 bits in the 5° byte 
+	assign threshold = all_data_out         [6*8-1-2 : 5*8];   // 5:0 bits in the 6° byte
     assign div_value = all_data_out         [7*8-1:6*8];     // 7° byte
     assign weights = all_data_out           [59*8-1:7*8];    // (24*8+8*2)*2 = 208 weights*2 bits = 416 bits -> 52 bytes (from 8° to 59°)         
     assign delays = all_data_out            [163*8-1:59*8];  // (24*8+8*2)*4= 832 bits (104 bytes) (from 60° to 163°) 
