@@ -16,15 +16,7 @@ module tt_um_snn_with_delays_paolaunisa (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  // All output pins must be assigned. If not used, assign to 0.
-  //assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
-  //assign uio_out = 0;
-  //assign uio_oe  = 0;
-
-  // List all unused inputs to prevent warnings
-  //wire _unused = &{ena, clk, rst_n, 1'b0};
-
-    wire reset = ! rst_n;
+    wire reset = rst_n;
     wire SCLK;
     wire MOSI;
     wire CS;
@@ -38,7 +30,7 @@ module tt_um_snn_with_delays_paolaunisa (
     
     spiking_network_top  spiking_network_top_uut (
         .system_clock(clk),
-        .reset(reset),
+        .rst_n(reset),
         .SCLK(SCLK),
         .MOSI(MOSI),
         .SS(CS),
@@ -69,5 +61,5 @@ module tt_um_snn_with_delays_paolaunisa (
     assign uio_out[5:4]=output_spikes;
     assign uio_out[6]=data_valid_out;
     assign uio_out[7]=spi_instruction_done;
-
+  
 endmodule
