@@ -4,5 +4,5 @@ create_clock -period 100.000 -name serial_clock -waveform {0.000 50.000} -add [g
 set_clock_transition 0.1500 [get_clocks {serial_clock}]
 set_clock_uncertainty 0.2500 serial_clock
 set_clock_groups -asynchronous -group [get_clocks {clk}] -group [get_clocks {serial_clock}]
-set_input_delay 1.5 -clock [get_clocks $::env(CLOCK_PORT)] {rst_n}
-set_input_delay 1.5 -clock [get_clocks $::env(CLOCK_PORT)] {ui_in}
+# set_input_delay 1.5 -clock [get_clocks $::env(CLOCK_PORT)] {rst_n}
+# set_input_delay 1.5 -clock [get_clocks $::env(CLOCK_PORT)] {ui_in}
