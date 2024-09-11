@@ -14,7 +14,7 @@ module NeuronLayerWithDelays_debug #( //weight bit-length=2bits=(zero,sign) // m
     input wire [N*M*3-1:0] delay_values, // Flattened array of 3-bit delay values
     input wire [N*M-1:0] delays,         // Array of delay enables for each input
     output wire [N*6-1:0] membrane_potential_out, // add for debug
-    output wire [N-1:0] output_spikes    // Output spike signals for each neuron
+    output wire [N-1:0] output_spikes    // Output spike signals for each neuron 
 );
 
     // Generate NeuronWithDelays instances for each neuron
