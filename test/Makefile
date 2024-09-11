@@ -23,6 +23,7 @@ PROJECT_SOURCES += spi_interface.v
 PROJECT_SOURCES += spi_slave.v
 PROJECT_SOURCES += synchronizer.v
 PROJECT_SOURCES += TwoLayerNetwork_debug.v
+PROJECT_SOURCES += reset_manager.v
 
 ifneq ($(GATES),yes)
 
