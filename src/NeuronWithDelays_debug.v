@@ -18,7 +18,7 @@ module NeuronWithDelays_debug #( //weight bit-length=2bits=(zero,sign) // membra
     wire [M-1:0] delayed_spikes;     // Delayed input spikes
 
     // Generate neuron_delay instances for each input spike
-    genvar i; 
+    genvar i;
     generate
         for (i = 0; i < M; i = i + 1) begin: neuron_delay_gen
             neuron_delay neuron_delay_inst (

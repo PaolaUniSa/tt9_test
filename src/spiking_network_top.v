@@ -1,6 +1,7 @@
-module spiking_network_top (
+module spiking_network_top 
+ (
     input wire system_clock,
-    input wire reset,
+    input wire rst_n,
     input wire SCLK,
     input wire MOSI,
     input wire SS,
@@ -32,26 +33,44 @@ module spiking_network_top (
     wire input_ready_sync;
     wire [164*8-1:0] all_data_out;
     wire debug_config_ready_sync;
+    wire sys_clk_reset_synchr, SPI_reset_synchr;
+    wire sys_clk_reset, SPI_reset;
     // all_data_out Assignments
     // output wire [161*8-1:0] all_data_out
     // all_data_out:
     // input spikes      = 3*8 LSB ( first 3 bytes)-- addr: 0x00 -0x01 - 0x02
-    // decay             = 5:0 bits in the 4Â° byte -- addr: 0x03
-    // refractory_period = 5:0 bits in the 5Â° byte -- addr: 0x04
-    // threshold         = 5:0 bits in the 6Â° byte -- addr: 0x05
-    // div_value         = 7Â° byte  -- addr: 0x06
-    // weights           = (24*8+8*2)*2 = 208 weights*2 bits = 416 bits -> 52 bytes (from 8Â° to 59Â°)  -- addr: [0x07,0x3A] decimal:[7 - 58]
-    // delays            = (24*8+8*2)*4= 832 bits (104 bytes) (from 60Â° to 163Â°) -- addr: [0x3B,0xA2] decimal:[59 - 162]
-    // debug_config_in   = 8 bits in the 164Â° byte -- addr: 0xA3
+    // decay             = 5:0 bits in the 4° byte -- addr: 0x03
+    // refractory_period = 5:0 bits in the 5° byte -- addr: 0x04
+    // threshold         = 5:0 bits in the 6° byte -- addr: 0x05
+    // div_value         = 7° byte  -- addr: 0x06
+    // weights           = (24*8+8*2)*2 = 208 weights*2 bits = 416 bits -> 52 bytes (from 8° to 59°)  -- addr: [0x07,0x3A] decimal:[7 - 58]
+    // delays            = (24*8+8*2)*4= 832 bits (104 bytes) (from 60° to 163°) -- addr: [0x3B,0xA2] decimal:[59 - 162]
+    // debug_config_in   = 8 bits in the 164° byte -- addr: 0xA3
     // Instantiations
     
+    
+    // Instantiate the reset manager modules
+    reset_manager u_SPI_reset (
+        .clk(SCLK),
+        .async_reset_n(rst_n),
+        .sync_reset_n(SPI_reset_synchr)
+    );
+    
+    reset_manager u_sys_clk_reset (
+        .clk(system_clock),
+        .async_reset_n(rst_n),
+        .sync_reset_n(sys_clk_reset_synchr)
+    );    
+    
+    assign SPI_reset= !SPI_reset_synchr;
+    assign sys_clk_reset = !sys_clk_reset_synchr;
     
     
     spi_interface spi_inst (
         .SCLK(SCLK),
         .MOSI(MOSI),
         .SS(SS),
-        .RESET(reset),
+        .RESET(SPI_reset),
         .MISO(MISO),
         .clk_div_ready_reg_out(clk_div_ready_reg_out),
         .input_spike_ready_reg_out(input_spike_ready_reg_out),
@@ -63,7 +82,7 @@ module spiking_network_top (
 
     clock_divider clk_div_inst (
         .clk(system_clock),
-        .reset(reset),
+        .reset(sys_clk_reset),
         .enable(clk_div_ready_sync),
         .div_value(div_value),
         .clk_out(delay_clk)
@@ -71,7 +90,7 @@ module spiking_network_top (
 
     debug_module debug_inst  (
         .clk(system_clock),
-        .rst(reset),
+        .rst(sys_clk_reset),
         .en(debug_config_ready_sync),
         .debug_config_in(debug_config_in),
         .membrane_potentials(membrane_potentials),
@@ -83,7 +102,7 @@ module spiking_network_top (
 
     SNNwithDelays_top snn_inst (
         .clk(system_clock),
-        .reset(reset),
+        .reset(sys_clk_reset),
         .enable(SNN_enable), //(input_spike_ready_sync),
         .delay_clk(delay_clk),
         .input_spikes(input_spikes),
@@ -100,28 +119,28 @@ module spiking_network_top (
     // Synchronizers
     synchronizer input_ready_sync_inst (
         .clk(system_clock),
-        .reset(reset),
+        .reset(sys_clk_reset),
         .async_signal(input_ready),
         .sync_signal(input_ready_sync)
     );
     
     synchronizer clk_div_sync (
         .clk(system_clock),
-        .reset(reset),
+        .reset(sys_clk_reset),
         .async_signal(clk_div_ready_reg_out),
         .sync_signal(clk_div_ready_sync)
     );
 
     synchronizer input_spike_sync (
         .clk(system_clock),
-        .reset(reset),
+        .reset(sys_clk_reset),
         .async_signal(input_spike_ready_reg_out),
         .sync_signal(input_spike_ready_sync)
     );
 
     synchronizer debug_config_sync (
         .clk(system_clock),
-        .reset(reset),
+        .reset(sys_clk_reset),
         .async_signal(debug_config_ready_reg_out),
         .sync_signal(debug_config_ready_sync)
     );
@@ -130,21 +149,20 @@ module spiking_network_top (
     // output wire [161*8-1:0] all_data_out
     // all_data_out:
     // input spikes      = 3*8 LSB ( first 3 bytes)-- addr: 0x00 -0x01 - 0x02
-    // decay             = 5:0 bits in the 4Â° byte -- addr: 0x03
-    // refractory_period = 5:0 bits in the 5Â° byte -- addr: 0x04
-    // threshold         = 5:0 bits in the 6Â° byte -- addr: 0x05
-    // div_value         = 7Â° byte  -- addr: 0x06
-    // weights           = (24*8+8*2)*2 = 208 weights*2 bits = 416 bits -> 52 bytes (from 8Â° to 59Â°)  -- addr: [0x07,0x3A] decimal:[7 - 58]
-    // delays            = (24*8+8*2)*4= 832 bits (104 bytes) (from 60Â° to 163Â°) -- addr: [0x3B,0xA2] decimal:[59 - 162]
-    // debug_config_in   = 8 bits in the 164Â° byte -- addr: 0xA3
+    // decay             = 5:0 bits in the 4° byte -- addr: 0x03
+    // refractory_period = 5:0 bits in the 5° byte -- addr: 0x04
+    // threshold         = 5:0 bits in the 6° byte -- addr: 0x05
+    // div_value         = 7° byte  -- addr: 0x06
+    // weights           = (24*8+8*2)*2 = 208 weights*2 bits = 416 bits -> 52 bytes (from 8° to 59°)  -- addr: [0x07,0x3A] decimal:[7 - 58]
+    // delays            = (24*8+8*2)*4= 832 bits (104 bytes) (from 60° to 163°) -- addr: [0x3B,0xA2] decimal:[59 - 162]
+    // debug_config_in   = 8 bits in the 164° byte -- addr: 0xA3
 	assign input_spikes = all_data_out      [3*8-1 : 0];     // 3 bytes
-	assign decay = all_data_out             [4*8-1-2 : 3*8];   // 5:0 bits in the 4Â° byte
-	assign refractory_period = all_data_out [5*8-1-2 : 4*8];   // 5:0 bits in the 5Â° byte 
-	assign threshold = all_data_out         [6*8-1-2 : 5*8];   // 5:0 bits in the 6Â° byte
-    assign div_value = all_data_out         [7*8-1:6*8];     // 7Â° byte
-    assign weights = all_data_out           [59*8-1:7*8];    // (24*8+8*2)*2 = 208 weights*2 bits = 416 bits -> 52 bytes (from 8Â° to 59Â°)         
-    assign delays = all_data_out            [163*8-1:59*8];  // (24*8+8*2)*4= 832 bits (104 bytes) (from 60Â° to 163Â°) 
-    assign debug_config_in = all_data_out   [164*8-1:163*8]; // 8 bits in the 164Â° byte
+    assign decay = all_data_out             [4*8-1-2 : 3*8];   // 5:0 bits in the 4° byte
+    assign refractory_period = all_data_out [5*8-1-2 : 4*8];   // 5:0 bits in the 5° byte 
+    assign threshold = all_data_out         [6*8-1-2 : 5*8];   // 5:0 bits in the 6° byte
+    assign div_value = all_data_out         [7*8-1:6*8];     // 7° byte
+    assign weights = all_data_out           [59*8-1:7*8];    // (24*8+8*2)*2 = 208 weights*2 bits = 416 bits -> 52 bytes (from 8° to 59°)         
+    assign delays = all_data_out            [163*8-1:59*8];  // (24*8+8*2)*4= 832 bits (104 bytes) (from 60° to 163°) 
+    assign debug_config_in = all_data_out   [164*8-1:163*8]; // 8 bits in the 164° byte
 
 endmodule   
-

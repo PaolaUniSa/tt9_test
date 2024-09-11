@@ -3,7 +3,7 @@ module clock_divider (
     input wire reset,             // Reset signal
     input wire enable,            // Enable signal
     input wire [7:0] div_value,   // 8-bit Divider value
-    output reg clk_out            // Output clock
+    output reg clk_out            // Output clock=> f_out= f_in /2*(divider value+1) = [f_in ; f_in/512]
 );
 
     reg [7:0] counter;
