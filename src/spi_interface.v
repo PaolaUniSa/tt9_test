@@ -4,20 +4,20 @@ module spi_interface (
     output wire clk_div_ready_reg_out,
     output wire input_spike_ready_reg_out,
     output wire debug_config_ready_reg_out,
-    output wire [164*8-1:0] all_data_out,
+    output wire [66*8-1:0] all_data_out,
     output wire spi_instruction_done, //additional support signal at protocol level -- added 6Sep2024
     output wire data_valid_out //additional debug signal -- added 6Sep2024
     // all_data_out Assignments
     // output wire [161*8-1:0] all_data_out
     // all_data_out:
-    // input spikes      = 3*8 LSB ( first 3 bytes)-- addr: 0x00 -0x01 - 0x02
-    // decay             = 5:0 bits in the 4° byte -- addr: 0x03
-    // refractory_period = 5:0 bits in the 5° byte -- addr: 0x04
-    // threshold         = 5:0 bits in the 6° byte -- addr: 0x05
-    // div_value         = 7° byte  -- addr: 0x06
-    // weights           = (24*8+8*2)*2 = 208 weights*2 bits = 416 bits -> 52 bytes (from 8° to 59°)  -- addr: [0x07,0x3A] decimal:[7 - 58]
-    // delays            = (24*8+8*2)*4= 832 bits (104 bytes) (from 60° to 163°) -- addr: [0x3B,0xA2] decimal:[59 - 162]
-    // debug_config_in   = 8 bits in the 164° byte -- addr: 0xA3
+    // input spikes      = 8 bits in the first byte-- addr: 0x00 
+    // decay             = 5:0 bits in the 2� byte -- addr: 0x01
+    // refractory_period = 5:0 bits in the 3� byte -- addr: 0x02
+    // threshold         = 5:0 bits in the 4� byte -- addr: 0x03
+    // div_value         = 5� byte  -- addr: 0x04
+    // weights           = (8*8+8*2)*2 = 160 bits -> 20 bytes (from 6� to 25�)  -- addr: [0x07,0x3A] decimal:[5 - 24]
+    // delays            = (8*8+8*2)*4= 320 bits (40 bytes) (from 26� to 65�) -- addr: [0x19,0x40] decimal:[25 - 64]
+    // debug_config_in   = 8 bits in the 66 byte -- addr: 0x41 decimal:65
 );
     // Internal signals
     wire [7:0] received_data;
