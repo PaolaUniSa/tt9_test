@@ -1,7 +1,7 @@
 module TwoLayerNetwork_debug #( //weight bit-length=2bits=(zero,sign) // membrane potential bit-length=6 bits
     parameter M1 = 8,                // Number of input spikes for the first layer
     parameter N1 = 8,                 // Number of neurons in the first layer
-    parameter N2 = 2                 // Number of neurons in the second layer
+    parameter N2 = 2                 // Number of neurons in the second layer 
 )(
     input wire clk,                        // Clock signal
     input wire reset,                      // Asynchronous reset, active high
