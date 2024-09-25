@@ -1,5 +1,5 @@
 module spi_interface (
-    input wire SCLK, MOSI, SS, RESET,
+    input wire SCLK, MOSI, SS, RESET, 
     output wire MISO,
     output wire clk_div_ready_reg_out,
     output wire input_spike_ready_reg_out,
