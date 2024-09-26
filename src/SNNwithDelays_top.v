@@ -4,7 +4,7 @@ module SNNwithDelays_top //weight bit-length=2bits=(zero,sign) // membrane poten
     input wire reset,                      // Asynchronous reset, active high
     input wire enable,                     // Enable input for the entire network
     input wire delay_clk,                  // Delay Clock signal
-    input wire [8:0] input_spikes,        // M1-bit input spikes for the first layer
+    input wire [8-1:0] input_spikes,        // M1-bit input spikes for the first layer
     input wire [(8*8+8*2)*2-1:0] weights,           // Combined weights for both layers (N1*M1*8 + N2*N1*8 bits)
     input wire [6-1:0] threshold,            // Firing threshold for both layers
     input wire [6-1:0] decay,                // Decay value for both layers
