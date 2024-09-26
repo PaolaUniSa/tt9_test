@@ -1,12 +1,12 @@
 module spi_interface (
-    input wire SCLK, MOSI, SS, RESET, 
+    input wire SCLK, MOSI, SS, RESET,
     output wire MISO,
     output wire clk_div_ready_reg_out,
     output wire input_spike_ready_reg_out,
     output wire debug_config_ready_reg_out,
-    output wire [66*8-1:0] all_data_out,
-    output wire spi_instruction_done, // additional support signal at protocol level -- added 6Sep2024
-    output wire data_valid_out // additional debug signal -- added 6Sep2024
+    output wire [115*8-1:0] all_data_out, 
+    output wire spi_instruction_done, //additional support signal at protocol level -- added 6Sep2024
+    output wire data_valid_out //additional debug signal -- added 6Sep2024
     // all_data_out Assignments
     // output wire [161*8-1:0] all_data_out
     // all_data_out:
