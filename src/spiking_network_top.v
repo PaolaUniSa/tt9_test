@@ -24,8 +24,8 @@ module spiking_network_top
     wire [6-1:0] refractory_period;
     wire [6-1:0] threshold;
     wire [7:0] div_value;
-    wire [(8*8+8*2)*2-1:0] weights;
-    wire [(8*8+8*2)*4-1:0] delays; // 832
+    wire [(16*8+8*2)*2-1:0] weights;
+    wire [(16*8+8*2)*4-1:0] delays; // 832
     wire [7:0] debug_config_in;
     wire [(8+2)*6-1:0] membrane_potentials; 
     wire [8-1:0] output_spikes_layer1;
