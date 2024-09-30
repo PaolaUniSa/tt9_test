@@ -1,6 +1,6 @@
 module spiking_network_top 
  (
-    input wire system_clock,
+    input wire system_clock, 
     input wire rst_n,
     input wire SCLK,
     input wire MOSI,
@@ -19,19 +19,19 @@ module spiking_network_top
     wire debug_config_ready_reg_out;
     wire clk_div_ready_sync;
     wire input_spike_ready_sync;
-    wire [2*8-1:0] input_spikes; 
+    wire [8-1:0] input_spikes; 
     wire [6-1:0] decay;
     wire [6-1:0] refractory_period;
     wire [6-1:0] threshold;
     wire [7:0] div_value;
-    wire [(16*8+8*2)*2-1:0] weights;
-    wire [(16*8+8*2)*4-1:0] delays; // 832
+    wire [(8*8+8*2)*2-1:0] weights;
+    wire [(8*8+8*2)*4-1:0] delays; // 832
     wire [7:0] debug_config_in;
     wire [(8+2)*6-1:0] membrane_potentials; 
     wire [8-1:0] output_spikes_layer1;
     wire delay_clk;
     wire input_ready_sync;
-    wire [115*8-1:0] all_data_out;
+    wire [66*8-1:0] all_data_out;
     wire debug_config_ready_sync;
     wire sys_clk_reset_synchr, SPI_reset_synchr;
     wire sys_clk_reset, SPI_reset;
@@ -156,13 +156,13 @@ module spiking_network_top
     // weights           = (8*8+8*2)*2 = 160 bits -> 20 bytes (from 6° to 25°)  -- addr: [0x07,0x3A] decimal:[5 - 24]
     // delays            = (8*8+8*2)*4= 320 bits (40 bytes) (from 26° to 65°) -- addr: [0x19,0x40] decimal:[25 - 64]
     // debug_config_in   = 8 bits in the 66 byte -- addr: 0x41 decimal:65
-	assign input_spikes = all_data_out      [2*8-1 : 0];     // 8 bits in the first byte-- addr: 0x00 - 0x01
-    assign decay = all_data_out             [3*8-1-2 : 2*8];   // 5:0 bits in the 2° byte -- addr: 0x02
-    assign refractory_period = all_data_out [4*8-1-2 : 3*8];   // 5:0 bits in the 3° byte -- addr: 0x03
-    assign threshold = all_data_out         [5*8-1-2 : 4*8];   // 5:0 bits in the 4° byte -- addr: 0x04
-    assign div_value = all_data_out         [6*8-1:5*8];     // 5° byte  -- addr: 0x05
-    assign weights = all_data_out           [42*8-1:6*8];    // (16*8+8*2)*2 = 288 bits -> 36 bytes (from 7° to 42°)  -- addr: [0x06,0x29] decimal:[6 - 41]       
-    assign delays = all_data_out            [114*8-1:42*8];  // (16*8+8*2)*4= 576 bits (72 bytes) (from 43° to 114°) -- addr: [0x2A,0x71] decimal:[42 - 113]
-    assign debug_config_in = all_data_out   [115*8-1:114*8]; // 8 bits in the 115 byte -- addr: 0x72 decimal:114
+	assign input_spikes = all_data_out      [8-1 : 0];     // 8 bits in the first byte-- addr: 0x00
+    assign decay = all_data_out             [2*8-1-2 : 1*8];   // 5:0 bits in the 2° byte -- addr: 0x01
+    assign refractory_period = all_data_out [3*8-1-2 : 2*8];   // 5:0 bits in the 3° byte -- addr: 0x02
+    assign threshold = all_data_out         [4*8-1-2 : 3*8];   // 5:0 bits in the 4° byte -- addr: 0x03
+    assign div_value = all_data_out         [5*8-1:4*8];     // 5° byte  -- addr: 0x04
+    assign weights = all_data_out           [25*8-1:5*8];    // (8*8+8*2)*2 = 160 bits -> 20 bytes (from 6° to 25°)  -- addr: [0x07,0x3A] decimal:[5 - 24]       
+    assign delays = all_data_out            [65*8-1:25*8];  // (8*8+8*2)*4= 320 bits (40 bytes) (from 26° to 65°) -- addr: [0x19,0x40] decimal:[25 - 64]
+    assign debug_config_in = all_data_out   [66*8-1:65*8]; // 8 bits in the 66 byte -- addr: 0x41 decimal:65
 
 endmodule   
