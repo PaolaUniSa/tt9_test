@@ -3,7 +3,7 @@ module debug_module(
     input wire rst,    // Active high reset
     input wire en,     // Enable signal
     input wire [7:0] debug_config_in,
-    input wire [(8+2)*6-1:0] membrane_potentials, // Flattened array
+    input wire [(8+8)*6-1:0] membrane_potentials, // Flattened array
     input wire [8-1:0] output_spikes_layer1,
     output reg [8-1:0] debug_output
 );
@@ -33,6 +33,12 @@ module debug_module(
         8'b00000111: debug_output =  {2'b00,membrane_potentials[8*6-1:7*6]};
         8'b00001000: debug_output =  {2'b00,membrane_potentials[9*6-1:8*6]};
         8'b00001001: debug_output =  {2'b00,membrane_potentials[10*6-1:9*6]};
+        8'b00001010: debug_output = {2'b00, membrane_potentials[11*6-1:10*6]};
+        8'b00001011: debug_output = {2'b00, membrane_potentials[12*6-1:11*6]};
+        8'b00001100: debug_output = {2'b00, membrane_potentials[13*6-1:12*6]};
+        8'b00001101: debug_output = {2'b00, membrane_potentials[14*6-1:13*6]};
+        8'b00001110: debug_output = {2'b00, membrane_potentials[15*6-1:14*6]};
+        8'b00001111: debug_output = {2'b00, membrane_potentials[16*6-1:15*6]};
         default: debug_output = output_spikes_layer1;
     endcase
 

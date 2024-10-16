@@ -4,7 +4,7 @@ module spi_interface (
     output wire clk_div_ready_reg_out,
     output wire input_spike_ready_reg_out,
     output wire debug_config_ready_reg_out,
-    output wire [66*8-1:0] all_data_out,
+    output wire [(5+32+64+1)*8-1:0] all_data_out,
     output wire spi_instruction_done, // additional support signal at protocol level -- added 6Sep2024
     output wire data_valid_out // additional debug signal -- added 6Sep2024
     // all_data_out Assignments

@@ -8,7 +8,7 @@ module spiking_network_top
     input wire input_ready,
     output wire MISO,
     output wire [8-1:0] debug_output,//[7:0]
-    output wire [1:0] output_spikes,
+    output wire [8-1:0] output_spikes,
     output wire spi_instruction_done, //additional support signal at protocol level -- added 6Sep2024
     output wire data_valid_out //additional debug signal -- added 6Sep2024
 );
@@ -24,14 +24,14 @@ module spiking_network_top
     wire [6-1:0] refractory_period;
     wire [6-1:0] threshold;
     wire [7:0] div_value;
-    wire [(8*8+8*2)*2-1:0] weights;
-    wire [(8*8+8*2)*4-1:0] delays; // 832
+    wire [(8*8+8*8)*2-1:0] weights;
+    wire [(8*8+8*8)*4-1:0] delays; // 832
     wire [7:0] debug_config_in;
-    wire [(8+2)*6-1:0] membrane_potentials; 
+    wire [(8+8)*6-1:0] membrane_potentials; 
     wire [8-1:0] output_spikes_layer1;
     wire delay_clk;
     wire input_ready_sync;
-    wire [66*8-1:0] all_data_out;
+    wire [(5+32+64+1)*8-1:0] all_data_out; //66*8-1
     wire debug_config_ready_sync;
     wire sys_clk_reset_synchr, SPI_reset_synchr;
     wire sys_clk_reset, SPI_reset;
@@ -149,20 +149,20 @@ module spiking_network_top
     // output wire [161*8-1:0] all_data_out
     // all_data_out:
     // input spikes      = 8 bits in the first byte-- addr: 0x00 
-    // decay             = 5:0 bits in the 2Â° byte -- addr: 0x01
-    // refractory_period = 5:0 bits in the 3Â° byte -- addr: 0x02
-    // threshold         = 5:0 bits in the 4Â° byte -- addr: 0x03
-    // div_value         = 5Â° byte  -- addr: 0x04
-    // weights           = (8*8+8*2)*2 = 160 bits -> 20 bytes (from 6Â° to 25Â°)  -- addr: [0x07,0x3A] decimal:[5 - 24]
-    // delays            = (8*8+8*2)*4= 320 bits (40 bytes) (from 26Â° to 65Â°) -- addr: [0x19,0x40] decimal:[25 - 64]
+    // decay             = 5:0 bits in the 2° byte -- addr: 0x01
+    // refractory_period = 5:0 bits in the 3° byte -- addr: 0x02
+    // threshold         = 5:0 bits in the 4° byte -- addr: 0x03
+    // div_value         = 5° byte  -- addr: 0x04
+    // weights           = (8*8+8*2)*2 = 160 bits -> 20 bytes (from 6° to 25°)  -- addr: [0x07,0x3A] decimal:[5 - 24]
+    // delays            = (8*8+8*2)*4= 320 bits (40 bytes) (from 26° to 65°) -- addr: [0x19,0x40] decimal:[25 - 64]
     // debug_config_in   = 8 bits in the 66 byte -- addr: 0x41 decimal:65
 	assign input_spikes = all_data_out      [8-1 : 0];     // 8 bits in the first byte-- addr: 0x00
-    assign decay = all_data_out             [2*8-1-2 : 1*8];   // 5:0 bits in the 2Â° byte -- addr: 0x01
-    assign refractory_period = all_data_out [3*8-1-2 : 2*8];   // 5:0 bits in the 3Â° byte -- addr: 0x02
-    assign threshold = all_data_out         [4*8-1-2 : 3*8];   // 5:0 bits in the 4Â° byte -- addr: 0x03
-    assign div_value = all_data_out         [5*8-1:4*8];     // 5Â° byte  -- addr: 0x04
-    assign weights = all_data_out           [25*8-1:5*8];    // (8*8+8*2)*2 = 160 bits -> 20 bytes (from 6Â° to 25Â°)  -- addr: [0x07,0x3A] decimal:[5 - 24]       
-    assign delays = all_data_out            [65*8-1:25*8];  // (8*8+8*2)*4= 320 bits (40 bytes) (from 26Â° to 65Â°) -- addr: [0x19,0x40] decimal:[25 - 64]
-    assign debug_config_in = all_data_out   [66*8-1:65*8]; // 8 bits in the 66 byte -- addr: 0x41 decimal:65
+    assign decay = all_data_out             [2*8-1-2 : 1*8];   // 5:0 bits in the 2° byte -- addr: 0x01
+    assign refractory_period = all_data_out [3*8-1-2 : 2*8];   // 5:0 bits in the 3° byte -- addr: 0x02
+    assign threshold = all_data_out         [4*8-1-2 : 3*8];   // 5:0 bits in the 4° byte -- addr: 0x03
+    assign div_value = all_data_out         [5*8-1:4*8];     // 5° byte  -- addr: 0x04
+    assign weights = all_data_out           [(5+32)*8-1:5*8];    // (8*8+8*2)*2 = 160 bits -> 20 bytes (from 6° to 25°)  -- addr: [0x07,0x3A] decimal:[5 - 24]       
+    assign delays = all_data_out            [(5+32+64)*8-1:(5+32)*8];  // (8*8+8*2)*4= 320 bits (40 bytes) (from 26° to 65°) -- addr: [0x19,0x40] decimal:[25 - 64]
+    assign debug_config_in = all_data_out   [(5+32+64+1)*8-1:(5+32+64)*8]; // 8 bits in the 66 byte -- addr: 0x41 decimal:65
 
 endmodule   
