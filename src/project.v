@@ -45,7 +45,7 @@ module tt_um_snn_with_delays_paolaunisa (
     // All output pins must be assigned. If not used, assign to 0.
     assign uo_out=debug_output;
     
-    assign uio_oe = 8'b00110100;
+    assign uio_oe = 8'b11110100; //8'b00110100;
     //input
     assign input_ready=ui_in[0];
     assign CS=uio_in[0];
