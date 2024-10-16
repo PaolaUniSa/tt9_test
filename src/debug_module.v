@@ -5,6 +5,7 @@ module debug_module(
     input wire [7:0] debug_config_in,
     input wire [(8+8)*6-1:0] membrane_potentials, // Flattened array
     input wire [8-1:0] output_spikes_layer1,
+    input wire [8-1:0] output_spikes_layer2,
     output reg [8-1:0] debug_output
 );
 
@@ -39,7 +40,8 @@ module debug_module(
         8'b00001101: debug_output = {2'b00, membrane_potentials[14*6-1:13*6]};
         8'b00001110: debug_output = {2'b00, membrane_potentials[15*6-1:14*6]};
         8'b00001111: debug_output = {2'b00, membrane_potentials[16*6-1:15*6]};
-        default: debug_output = output_spikes_layer1;
+        8'b00011111: debug_output = output_spikes_layer1;
+        default: debug_output = output_spikes_layer2;
     endcase
 
 endmodule
