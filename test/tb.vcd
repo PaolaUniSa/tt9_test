@@ -1,0 +1,6518 @@
+$date
+	Wed Oct 16 14:16:42 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb $end
+$var wire 8 ! uio_oe [7:0] $end
+$var wire 8 " uo_out [7:0] $end
+$var wire 8 # uio_out [7:0] $end
+$var reg 1 $ clk $end
+$var reg 1 % ena $end
+$var reg 1 & rst_n $end
+$var reg 8 ' ui_in [7:0] $end
+$var reg 8 ( uio_in [7:0] $end
+$scope module user_project $end
+$var wire 1 $ clk $end
+$var wire 1 % ena $end
+$var wire 1 ) reset $end
+$var wire 1 & rst_n $end
+$var wire 8 * ui_in [7:0] $end
+$var wire 8 + uio_in [7:0] $end
+$var wire 8 , uio_oe [7:0] $end
+$var wire 8 - uo_out [7:0] $end
+$var wire 8 . uio_out [7:0] $end
+$var wire 1 / spi_instruction_done $end
+$var wire 8 0 output_spikes [7:0] $end
+$var wire 1 1 input_ready $end
+$var wire 8 2 debug_output [7:0] $end
+$var wire 1 3 data_valid_out $end
+$var wire 1 4 _unused $end
+$var wire 1 5 SCLK $end
+$var wire 1 6 MOSI $end
+$var wire 1 7 MISO $end
+$var wire 1 8 CS $end
+$scope module spiking_network_top_uut $end
+$var wire 1 6 MOSI $end
+$var wire 1 5 SCLK $end
+$var wire 1 9 SNN_enable $end
+$var wire 1 8 SS $end
+$var wire 1 1 input_ready $end
+$var wire 8 : output_spikes [7:0] $end
+$var wire 1 ) rst_n $end
+$var wire 1 $ system_clock $end
+$var wire 256 ; weights [255:0] $end
+$var wire 6 < threshold [5:0] $end
+$var wire 1 = sys_clk_reset_synchr $end
+$var wire 1 > sys_clk_reset $end
+$var wire 1 / spi_instruction_done $end
+$var wire 6 ? refractory_period [5:0] $end
+$var wire 8 @ output_spikes_layer2 [7:0] $end
+$var wire 8 A output_spikes_layer1 [7:0] $end
+$var wire 96 B membrane_potentials [95:0] $end
+$var wire 8 C input_spikes [7:0] $end
+$var wire 1 D input_spike_ready_sync $end
+$var wire 1 E input_spike_ready_reg_out $end
+$var wire 1 F input_ready_sync $end
+$var wire 8 G div_value [7:0] $end
+$var wire 512 H delays [511:0] $end
+$var wire 1 I delay_clk $end
+$var wire 6 J decay [5:0] $end
+$var wire 8 K debug_output [7:0] $end
+$var wire 1 L debug_config_ready_sync $end
+$var wire 1 M debug_config_ready_reg_out $end
+$var wire 8 N debug_config_in [7:0] $end
+$var wire 1 3 data_valid_out $end
+$var wire 1 O clk_div_ready_sync $end
+$var wire 1 P clk_div_ready_reg_out $end
+$var wire 816 Q all_data_out [815:0] $end
+$var wire 1 R SPI_reset_synchr $end
+$var wire 1 S SPI_reset $end
+$var wire 1 7 MISO $end
+$scope module clk_div_inst $end
+$var wire 1 $ clk $end
+$var wire 8 T div_value [7:0] $end
+$var wire 1 > reset $end
+$var wire 1 O enable $end
+$var reg 1 I clk_out $end
+$var reg 8 U counter [7:0] $end
+$upscope $end
+$scope module clk_div_sync $end
+$var wire 1 $ clk $end
+$var wire 1 > reset $end
+$var wire 1 P async_signal $end
+$var reg 1 V sync_ff1 $end
+$var reg 1 O sync_signal $end
+$upscope $end
+$scope module debug_config_sync $end
+$var wire 1 $ clk $end
+$var wire 1 > reset $end
+$var wire 1 M async_signal $end
+$var reg 1 W sync_ff1 $end
+$var reg 1 L sync_signal $end
+$upscope $end
+$scope module debug_inst $end
+$var wire 1 $ clk $end
+$var wire 8 X debug_config_in [7:0] $end
+$var wire 1 L en $end
+$var wire 1 > rst $end
+$var wire 8 Y output_spikes_layer2 [7:0] $end
+$var wire 8 Z output_spikes_layer1 [7:0] $end
+$var wire 96 [ membrane_potentials [95:0] $end
+$var reg 8 \ debug_config [7:0] $end
+$var reg 8 ] debug_output [7:0] $end
+$upscope $end
+$scope module input_ready_sync_inst $end
+$var wire 1 1 async_signal $end
+$var wire 1 $ clk $end
+$var wire 1 > reset $end
+$var reg 1 ^ sync_ff1 $end
+$var reg 1 F sync_signal $end
+$upscope $end
+$scope module input_spike_sync $end
+$var wire 1 $ clk $end
+$var wire 1 > reset $end
+$var wire 1 E async_signal $end
+$var reg 1 _ sync_ff1 $end
+$var reg 1 D sync_signal $end
+$upscope $end
+$scope module snn_inst $end
+$var wire 1 $ clk $end
+$var wire 6 ` decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 512 a delays [511:0] $end
+$var wire 1 9 enable $end
+$var wire 8 b input_spikes [7:0] $end
+$var wire 6 c refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 d threshold [5:0] $end
+$var wire 256 e weights [255:0] $end
+$var wire 8 f output_spikes_layer1 [7:0] $end
+$var wire 8 g output_spikes [7:0] $end
+$var wire 96 h membrane_potential_out [95:0] $end
+$var wire 64 i delays2 [63:0] $end
+$var wire 64 j delays1 [63:0] $end
+$var wire 192 k delay_values2 [191:0] $end
+$var wire 192 l delay_values1 [191:0] $end
+$scope begin unpack_delays1[0] $end
+$upscope $end
+$scope begin unpack_delays1[1] $end
+$upscope $end
+$scope begin unpack_delays1[2] $end
+$upscope $end
+$scope begin unpack_delays1[3] $end
+$upscope $end
+$scope begin unpack_delays1[4] $end
+$upscope $end
+$scope begin unpack_delays1[5] $end
+$upscope $end
+$scope begin unpack_delays1[6] $end
+$upscope $end
+$scope begin unpack_delays1[7] $end
+$upscope $end
+$scope begin unpack_delays1[8] $end
+$upscope $end
+$scope begin unpack_delays1[9] $end
+$upscope $end
+$scope begin unpack_delays1[10] $end
+$upscope $end
+$scope begin unpack_delays1[11] $end
+$upscope $end
+$scope begin unpack_delays1[12] $end
+$upscope $end
+$scope begin unpack_delays1[13] $end
+$upscope $end
+$scope begin unpack_delays1[14] $end
+$upscope $end
+$scope begin unpack_delays1[15] $end
+$upscope $end
+$scope begin unpack_delays1[16] $end
+$upscope $end
+$scope begin unpack_delays1[17] $end
+$upscope $end
+$scope begin unpack_delays1[18] $end
+$upscope $end
+$scope begin unpack_delays1[19] $end
+$upscope $end
+$scope begin unpack_delays1[20] $end
+$upscope $end
+$scope begin unpack_delays1[21] $end
+$upscope $end
+$scope begin unpack_delays1[22] $end
+$upscope $end
+$scope begin unpack_delays1[23] $end
+$upscope $end
+$scope begin unpack_delays1[24] $end
+$upscope $end
+$scope begin unpack_delays1[25] $end
+$upscope $end
+$scope begin unpack_delays1[26] $end
+$upscope $end
+$scope begin unpack_delays1[27] $end
+$upscope $end
+$scope begin unpack_delays1[28] $end
+$upscope $end
+$scope begin unpack_delays1[29] $end
+$upscope $end
+$scope begin unpack_delays1[30] $end
+$upscope $end
+$scope begin unpack_delays1[31] $end
+$upscope $end
+$scope begin unpack_delays1[32] $end
+$upscope $end
+$scope begin unpack_delays1[33] $end
+$upscope $end
+$scope begin unpack_delays1[34] $end
+$upscope $end
+$scope begin unpack_delays1[35] $end
+$upscope $end
+$scope begin unpack_delays1[36] $end
+$upscope $end
+$scope begin unpack_delays1[37] $end
+$upscope $end
+$scope begin unpack_delays1[38] $end
+$upscope $end
+$scope begin unpack_delays1[39] $end
+$upscope $end
+$scope begin unpack_delays1[40] $end
+$upscope $end
+$scope begin unpack_delays1[41] $end
+$upscope $end
+$scope begin unpack_delays1[42] $end
+$upscope $end
+$scope begin unpack_delays1[43] $end
+$upscope $end
+$scope begin unpack_delays1[44] $end
+$upscope $end
+$scope begin unpack_delays1[45] $end
+$upscope $end
+$scope begin unpack_delays1[46] $end
+$upscope $end
+$scope begin unpack_delays1[47] $end
+$upscope $end
+$scope begin unpack_delays1[48] $end
+$upscope $end
+$scope begin unpack_delays1[49] $end
+$upscope $end
+$scope begin unpack_delays1[50] $end
+$upscope $end
+$scope begin unpack_delays1[51] $end
+$upscope $end
+$scope begin unpack_delays1[52] $end
+$upscope $end
+$scope begin unpack_delays1[53] $end
+$upscope $end
+$scope begin unpack_delays1[54] $end
+$upscope $end
+$scope begin unpack_delays1[55] $end
+$upscope $end
+$scope begin unpack_delays1[56] $end
+$upscope $end
+$scope begin unpack_delays1[57] $end
+$upscope $end
+$scope begin unpack_delays1[58] $end
+$upscope $end
+$scope begin unpack_delays1[59] $end
+$upscope $end
+$scope begin unpack_delays1[60] $end
+$upscope $end
+$scope begin unpack_delays1[61] $end
+$upscope $end
+$scope begin unpack_delays1[62] $end
+$upscope $end
+$scope begin unpack_delays1[63] $end
+$upscope $end
+$scope begin unpack_delays2[64] $end
+$upscope $end
+$scope begin unpack_delays2[65] $end
+$upscope $end
+$scope begin unpack_delays2[66] $end
+$upscope $end
+$scope begin unpack_delays2[67] $end
+$upscope $end
+$scope begin unpack_delays2[68] $end
+$upscope $end
+$scope begin unpack_delays2[69] $end
+$upscope $end
+$scope begin unpack_delays2[70] $end
+$upscope $end
+$scope begin unpack_delays2[71] $end
+$upscope $end
+$scope begin unpack_delays2[72] $end
+$upscope $end
+$scope begin unpack_delays2[73] $end
+$upscope $end
+$scope begin unpack_delays2[74] $end
+$upscope $end
+$scope begin unpack_delays2[75] $end
+$upscope $end
+$scope begin unpack_delays2[76] $end
+$upscope $end
+$scope begin unpack_delays2[77] $end
+$upscope $end
+$scope begin unpack_delays2[78] $end
+$upscope $end
+$scope begin unpack_delays2[79] $end
+$upscope $end
+$scope begin unpack_delays2[80] $end
+$upscope $end
+$scope begin unpack_delays2[81] $end
+$upscope $end
+$scope begin unpack_delays2[82] $end
+$upscope $end
+$scope begin unpack_delays2[83] $end
+$upscope $end
+$scope begin unpack_delays2[84] $end
+$upscope $end
+$scope begin unpack_delays2[85] $end
+$upscope $end
+$scope begin unpack_delays2[86] $end
+$upscope $end
+$scope begin unpack_delays2[87] $end
+$upscope $end
+$scope begin unpack_delays2[88] $end
+$upscope $end
+$scope begin unpack_delays2[89] $end
+$upscope $end
+$scope begin unpack_delays2[90] $end
+$upscope $end
+$scope begin unpack_delays2[91] $end
+$upscope $end
+$scope begin unpack_delays2[92] $end
+$upscope $end
+$scope begin unpack_delays2[93] $end
+$upscope $end
+$scope begin unpack_delays2[94] $end
+$upscope $end
+$scope begin unpack_delays2[95] $end
+$upscope $end
+$scope begin unpack_delays2[96] $end
+$upscope $end
+$scope begin unpack_delays2[97] $end
+$upscope $end
+$scope begin unpack_delays2[98] $end
+$upscope $end
+$scope begin unpack_delays2[99] $end
+$upscope $end
+$scope begin unpack_delays2[100] $end
+$upscope $end
+$scope begin unpack_delays2[101] $end
+$upscope $end
+$scope begin unpack_delays2[102] $end
+$upscope $end
+$scope begin unpack_delays2[103] $end
+$upscope $end
+$scope begin unpack_delays2[104] $end
+$upscope $end
+$scope begin unpack_delays2[105] $end
+$upscope $end
+$scope begin unpack_delays2[106] $end
+$upscope $end
+$scope begin unpack_delays2[107] $end
+$upscope $end
+$scope begin unpack_delays2[108] $end
+$upscope $end
+$scope begin unpack_delays2[109] $end
+$upscope $end
+$scope begin unpack_delays2[110] $end
+$upscope $end
+$scope begin unpack_delays2[111] $end
+$upscope $end
+$scope begin unpack_delays2[112] $end
+$upscope $end
+$scope begin unpack_delays2[113] $end
+$upscope $end
+$scope begin unpack_delays2[114] $end
+$upscope $end
+$scope begin unpack_delays2[115] $end
+$upscope $end
+$scope begin unpack_delays2[116] $end
+$upscope $end
+$scope begin unpack_delays2[117] $end
+$upscope $end
+$scope begin unpack_delays2[118] $end
+$upscope $end
+$scope begin unpack_delays2[119] $end
+$upscope $end
+$scope begin unpack_delays2[120] $end
+$upscope $end
+$scope begin unpack_delays2[121] $end
+$upscope $end
+$scope begin unpack_delays2[122] $end
+$upscope $end
+$scope begin unpack_delays2[123] $end
+$upscope $end
+$scope begin unpack_delays2[124] $end
+$upscope $end
+$scope begin unpack_delays2[125] $end
+$upscope $end
+$scope begin unpack_delays2[126] $end
+$upscope $end
+$scope begin unpack_delays2[127] $end
+$upscope $end
+$scope module two_layer_network_inst $end
+$var wire 1 $ clk $end
+$var wire 6 m decay1 [5:0] $end
+$var wire 6 n decay2 [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 192 o delay_values1 [191:0] $end
+$var wire 192 p delay_values2 [191:0] $end
+$var wire 64 q delays1 [63:0] $end
+$var wire 64 r delays2 [63:0] $end
+$var wire 1 9 enable $end
+$var wire 8 s input_spikes [7:0] $end
+$var wire 8 t output_spikes_layer1 [7:0] $end
+$var wire 6 u refractory_period1 [5:0] $end
+$var wire 6 v refractory_period2 [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 w threshold1 [5:0] $end
+$var wire 6 x threshold2 [5:0] $end
+$var wire 128 y weights1 [127:0] $end
+$var wire 128 z weights2 [127:0] $end
+$var wire 8 { output_spikes [7:0] $end
+$var wire 96 | membrane_potential_out [95:0] $end
+$var wire 8 } layer1_output_spikes [7:0] $end
+$scope module layer1 $end
+$var wire 1 $ clk $end
+$var wire 6 ~ decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 192 !" delay_values [191:0] $end
+$var wire 64 "" delays [63:0] $end
+$var wire 1 9 enable $end
+$var wire 8 #" input_spikes [7:0] $end
+$var wire 6 $" refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 %" threshold [5:0] $end
+$var wire 128 &" weights [127:0] $end
+$var wire 8 '" output_spikes [7:0] $end
+$var wire 48 (" membrane_potential_out [47:0] $end
+$scope begin neuron_gen[0] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 )" decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 *" delay_values [23:0] $end
+$var wire 8 +" delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 ," input_spikes [7:0] $end
+$var wire 6 -" refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 ." threshold [5:0] $end
+$var wire 16 /" weights [15:0] $end
+$var wire 1 0" spike_out $end
+$var wire 6 1" membrane_potential_out [5:0] $end
+$var wire 8 2" delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 3" delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 4" delay_value [2:0] $end
+$var wire 1 5" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 6" sync_dout $end
+$var wire 1 7" dout $end
+$var wire 1 8" delayed_dout $end
+$var reg 1 9" sync_reg1 $end
+$var reg 1 6" sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 :" delay [2:0] $end
+$var wire 1 5" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 8" dout $end
+$var reg 8 ;" shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 <" delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 =" delay_value [2:0] $end
+$var wire 1 >" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 ?" sync_dout $end
+$var wire 1 @" dout $end
+$var wire 1 A" delayed_dout $end
+$var reg 1 B" sync_reg1 $end
+$var reg 1 ?" sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 C" delay [2:0] $end
+$var wire 1 >" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 A" dout $end
+$var reg 8 D" shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 E" delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 F" delay_value [2:0] $end
+$var wire 1 G" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 H" sync_dout $end
+$var wire 1 I" dout $end
+$var wire 1 J" delayed_dout $end
+$var reg 1 K" sync_reg1 $end
+$var reg 1 H" sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 L" delay [2:0] $end
+$var wire 1 G" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 J" dout $end
+$var reg 8 M" shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 N" delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 O" delay_value [2:0] $end
+$var wire 1 P" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 Q" sync_dout $end
+$var wire 1 R" dout $end
+$var wire 1 S" delayed_dout $end
+$var reg 1 T" sync_reg1 $end
+$var reg 1 Q" sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 U" delay [2:0] $end
+$var wire 1 P" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 S" dout $end
+$var reg 8 V" shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 W" delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 X" delay_value [2:0] $end
+$var wire 1 Y" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 Z" sync_dout $end
+$var wire 1 [" dout $end
+$var wire 1 \" delayed_dout $end
+$var reg 1 ]" sync_reg1 $end
+$var reg 1 Z" sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 ^" delay [2:0] $end
+$var wire 1 Y" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 \" dout $end
+$var reg 8 _" shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 `" delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 a" delay_value [2:0] $end
+$var wire 1 b" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 c" sync_dout $end
+$var wire 1 d" dout $end
+$var wire 1 e" delayed_dout $end
+$var reg 1 f" sync_reg1 $end
+$var reg 1 c" sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 g" delay [2:0] $end
+$var wire 1 b" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 e" dout $end
+$var reg 8 h" shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 i" delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 j" delay_value [2:0] $end
+$var wire 1 k" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 l" sync_dout $end
+$var wire 1 m" dout $end
+$var wire 1 n" delayed_dout $end
+$var reg 1 o" sync_reg1 $end
+$var reg 1 l" sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 p" delay [2:0] $end
+$var wire 1 k" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 n" dout $end
+$var reg 8 q" shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 r" delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 s" delay_value [2:0] $end
+$var wire 1 t" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 u" sync_dout $end
+$var wire 1 v" dout $end
+$var wire 1 w" delayed_dout $end
+$var reg 1 x" sync_reg1 $end
+$var reg 1 u" sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 y" delay [2:0] $end
+$var wire 1 t" din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 w" dout $end
+$var reg 8 z" shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 {" decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 |" input_spikes [7:0] $end
+$var wire 6 }" refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 ~" threshold [5:0] $end
+$var wire 16 !# weights [15:0] $end
+$var wire 1 0" spike_out $end
+$var wire 6 "# membrane_potential_out [5:0] $end
+$var wire 6 ## input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 $# input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 %# weights [15:0] $end
+$var reg 6 &# current_sum [5:0] $end
+$var reg 6 '# input_current [5:0] $end
+$var integer 32 (# i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 )# decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 *# input_current [5:0] $end
+$var wire 6 +# membrane_potential_out [5:0] $end
+$var wire 6 ,# refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 -# threshold [5:0] $end
+$var wire 8 .# potential_update [7:0] $end
+$var reg 6 /# membrane_potential [5:0] $end
+$var reg 6 0# refractory_counter [5:0] $end
+$var reg 1 0" spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[1] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 1# decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 2# delay_values [23:0] $end
+$var wire 8 3# delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 4# input_spikes [7:0] $end
+$var wire 6 5# refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 6# threshold [5:0] $end
+$var wire 16 7# weights [15:0] $end
+$var wire 1 8# spike_out $end
+$var wire 6 9# membrane_potential_out [5:0] $end
+$var wire 8 :# delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 ;# delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 <# delay_value [2:0] $end
+$var wire 1 =# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 ># sync_dout $end
+$var wire 1 ?# dout $end
+$var wire 1 @# delayed_dout $end
+$var reg 1 A# sync_reg1 $end
+$var reg 1 ># sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 B# delay [2:0] $end
+$var wire 1 =# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 @# dout $end
+$var reg 8 C# shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 D# delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 E# delay_value [2:0] $end
+$var wire 1 F# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 G# sync_dout $end
+$var wire 1 H# dout $end
+$var wire 1 I# delayed_dout $end
+$var reg 1 J# sync_reg1 $end
+$var reg 1 G# sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 K# delay [2:0] $end
+$var wire 1 F# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 I# dout $end
+$var reg 8 L# shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 M# delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 N# delay_value [2:0] $end
+$var wire 1 O# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 P# sync_dout $end
+$var wire 1 Q# dout $end
+$var wire 1 R# delayed_dout $end
+$var reg 1 S# sync_reg1 $end
+$var reg 1 P# sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 T# delay [2:0] $end
+$var wire 1 O# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 R# dout $end
+$var reg 8 U# shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 V# delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 W# delay_value [2:0] $end
+$var wire 1 X# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 Y# sync_dout $end
+$var wire 1 Z# dout $end
+$var wire 1 [# delayed_dout $end
+$var reg 1 \# sync_reg1 $end
+$var reg 1 Y# sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 ]# delay [2:0] $end
+$var wire 1 X# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 [# dout $end
+$var reg 8 ^# shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 _# delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 `# delay_value [2:0] $end
+$var wire 1 a# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 b# sync_dout $end
+$var wire 1 c# dout $end
+$var wire 1 d# delayed_dout $end
+$var reg 1 e# sync_reg1 $end
+$var reg 1 b# sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 f# delay [2:0] $end
+$var wire 1 a# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 d# dout $end
+$var reg 8 g# shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 h# delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 i# delay_value [2:0] $end
+$var wire 1 j# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 k# sync_dout $end
+$var wire 1 l# dout $end
+$var wire 1 m# delayed_dout $end
+$var reg 1 n# sync_reg1 $end
+$var reg 1 k# sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 o# delay [2:0] $end
+$var wire 1 j# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 m# dout $end
+$var reg 8 p# shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 q# delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 r# delay_value [2:0] $end
+$var wire 1 s# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 t# sync_dout $end
+$var wire 1 u# dout $end
+$var wire 1 v# delayed_dout $end
+$var reg 1 w# sync_reg1 $end
+$var reg 1 t# sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 x# delay [2:0] $end
+$var wire 1 s# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 v# dout $end
+$var reg 8 y# shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 z# delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 {# delay_value [2:0] $end
+$var wire 1 |# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 }# sync_dout $end
+$var wire 1 ~# dout $end
+$var wire 1 !$ delayed_dout $end
+$var reg 1 "$ sync_reg1 $end
+$var reg 1 }# sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 #$ delay [2:0] $end
+$var wire 1 |# din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 !$ dout $end
+$var reg 8 $$ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 %$ decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 &$ input_spikes [7:0] $end
+$var wire 6 '$ refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 ($ threshold [5:0] $end
+$var wire 16 )$ weights [15:0] $end
+$var wire 1 8# spike_out $end
+$var wire 6 *$ membrane_potential_out [5:0] $end
+$var wire 6 +$ input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 ,$ input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 -$ weights [15:0] $end
+$var reg 6 .$ current_sum [5:0] $end
+$var reg 6 /$ input_current [5:0] $end
+$var integer 32 0$ i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 1$ decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 2$ input_current [5:0] $end
+$var wire 6 3$ membrane_potential_out [5:0] $end
+$var wire 6 4$ refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 5$ threshold [5:0] $end
+$var wire 8 6$ potential_update [7:0] $end
+$var reg 6 7$ membrane_potential [5:0] $end
+$var reg 6 8$ refractory_counter [5:0] $end
+$var reg 1 8# spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[2] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 9$ decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 :$ delay_values [23:0] $end
+$var wire 8 ;$ delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 <$ input_spikes [7:0] $end
+$var wire 6 =$ refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 >$ threshold [5:0] $end
+$var wire 16 ?$ weights [15:0] $end
+$var wire 1 @$ spike_out $end
+$var wire 6 A$ membrane_potential_out [5:0] $end
+$var wire 8 B$ delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 C$ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 D$ delay_value [2:0] $end
+$var wire 1 E$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 F$ sync_dout $end
+$var wire 1 G$ dout $end
+$var wire 1 H$ delayed_dout $end
+$var reg 1 I$ sync_reg1 $end
+$var reg 1 F$ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 J$ delay [2:0] $end
+$var wire 1 E$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 H$ dout $end
+$var reg 8 K$ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 L$ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 M$ delay_value [2:0] $end
+$var wire 1 N$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 O$ sync_dout $end
+$var wire 1 P$ dout $end
+$var wire 1 Q$ delayed_dout $end
+$var reg 1 R$ sync_reg1 $end
+$var reg 1 O$ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 S$ delay [2:0] $end
+$var wire 1 N$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 Q$ dout $end
+$var reg 8 T$ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 U$ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 V$ delay_value [2:0] $end
+$var wire 1 W$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 X$ sync_dout $end
+$var wire 1 Y$ dout $end
+$var wire 1 Z$ delayed_dout $end
+$var reg 1 [$ sync_reg1 $end
+$var reg 1 X$ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 \$ delay [2:0] $end
+$var wire 1 W$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 Z$ dout $end
+$var reg 8 ]$ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 ^$ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 _$ delay_value [2:0] $end
+$var wire 1 `$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 a$ sync_dout $end
+$var wire 1 b$ dout $end
+$var wire 1 c$ delayed_dout $end
+$var reg 1 d$ sync_reg1 $end
+$var reg 1 a$ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 e$ delay [2:0] $end
+$var wire 1 `$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 c$ dout $end
+$var reg 8 f$ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 g$ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 h$ delay_value [2:0] $end
+$var wire 1 i$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 j$ sync_dout $end
+$var wire 1 k$ dout $end
+$var wire 1 l$ delayed_dout $end
+$var reg 1 m$ sync_reg1 $end
+$var reg 1 j$ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 n$ delay [2:0] $end
+$var wire 1 i$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 l$ dout $end
+$var reg 8 o$ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 p$ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 q$ delay_value [2:0] $end
+$var wire 1 r$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 s$ sync_dout $end
+$var wire 1 t$ dout $end
+$var wire 1 u$ delayed_dout $end
+$var reg 1 v$ sync_reg1 $end
+$var reg 1 s$ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 w$ delay [2:0] $end
+$var wire 1 r$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 u$ dout $end
+$var reg 8 x$ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 y$ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 z$ delay_value [2:0] $end
+$var wire 1 {$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 |$ sync_dout $end
+$var wire 1 }$ dout $end
+$var wire 1 ~$ delayed_dout $end
+$var reg 1 !% sync_reg1 $end
+$var reg 1 |$ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 "% delay [2:0] $end
+$var wire 1 {$ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 ~$ dout $end
+$var reg 8 #% shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 $% delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 %% delay_value [2:0] $end
+$var wire 1 &% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 '% sync_dout $end
+$var wire 1 (% dout $end
+$var wire 1 )% delayed_dout $end
+$var reg 1 *% sync_reg1 $end
+$var reg 1 '% sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 +% delay [2:0] $end
+$var wire 1 &% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 )% dout $end
+$var reg 8 ,% shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 -% decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 .% input_spikes [7:0] $end
+$var wire 6 /% refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 0% threshold [5:0] $end
+$var wire 16 1% weights [15:0] $end
+$var wire 1 @$ spike_out $end
+$var wire 6 2% membrane_potential_out [5:0] $end
+$var wire 6 3% input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 4% input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 5% weights [15:0] $end
+$var reg 6 6% current_sum [5:0] $end
+$var reg 6 7% input_current [5:0] $end
+$var integer 32 8% i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 9% decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 :% input_current [5:0] $end
+$var wire 6 ;% membrane_potential_out [5:0] $end
+$var wire 6 <% refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 =% threshold [5:0] $end
+$var wire 8 >% potential_update [7:0] $end
+$var reg 6 ?% membrane_potential [5:0] $end
+$var reg 6 @% refractory_counter [5:0] $end
+$var reg 1 @$ spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[3] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 A% decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 B% delay_values [23:0] $end
+$var wire 8 C% delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 D% input_spikes [7:0] $end
+$var wire 6 E% refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 F% threshold [5:0] $end
+$var wire 16 G% weights [15:0] $end
+$var wire 1 H% spike_out $end
+$var wire 6 I% membrane_potential_out [5:0] $end
+$var wire 8 J% delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 K% delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 L% delay_value [2:0] $end
+$var wire 1 M% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 N% sync_dout $end
+$var wire 1 O% dout $end
+$var wire 1 P% delayed_dout $end
+$var reg 1 Q% sync_reg1 $end
+$var reg 1 N% sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 R% delay [2:0] $end
+$var wire 1 M% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 P% dout $end
+$var reg 8 S% shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 T% delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 U% delay_value [2:0] $end
+$var wire 1 V% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 W% sync_dout $end
+$var wire 1 X% dout $end
+$var wire 1 Y% delayed_dout $end
+$var reg 1 Z% sync_reg1 $end
+$var reg 1 W% sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 [% delay [2:0] $end
+$var wire 1 V% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 Y% dout $end
+$var reg 8 \% shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 ]% delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 ^% delay_value [2:0] $end
+$var wire 1 _% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 `% sync_dout $end
+$var wire 1 a% dout $end
+$var wire 1 b% delayed_dout $end
+$var reg 1 c% sync_reg1 $end
+$var reg 1 `% sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 d% delay [2:0] $end
+$var wire 1 _% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 b% dout $end
+$var reg 8 e% shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 f% delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 g% delay_value [2:0] $end
+$var wire 1 h% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 i% sync_dout $end
+$var wire 1 j% dout $end
+$var wire 1 k% delayed_dout $end
+$var reg 1 l% sync_reg1 $end
+$var reg 1 i% sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 m% delay [2:0] $end
+$var wire 1 h% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 k% dout $end
+$var reg 8 n% shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 o% delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 p% delay_value [2:0] $end
+$var wire 1 q% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 r% sync_dout $end
+$var wire 1 s% dout $end
+$var wire 1 t% delayed_dout $end
+$var reg 1 u% sync_reg1 $end
+$var reg 1 r% sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 v% delay [2:0] $end
+$var wire 1 q% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 t% dout $end
+$var reg 8 w% shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 x% delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 y% delay_value [2:0] $end
+$var wire 1 z% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 {% sync_dout $end
+$var wire 1 |% dout $end
+$var wire 1 }% delayed_dout $end
+$var reg 1 ~% sync_reg1 $end
+$var reg 1 {% sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 !& delay [2:0] $end
+$var wire 1 z% din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 }% dout $end
+$var reg 8 "& shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 #& delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 $& delay_value [2:0] $end
+$var wire 1 %& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 && sync_dout $end
+$var wire 1 '& dout $end
+$var wire 1 (& delayed_dout $end
+$var reg 1 )& sync_reg1 $end
+$var reg 1 && sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 *& delay [2:0] $end
+$var wire 1 %& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 (& dout $end
+$var reg 8 +& shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 ,& delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 -& delay_value [2:0] $end
+$var wire 1 .& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 /& sync_dout $end
+$var wire 1 0& dout $end
+$var wire 1 1& delayed_dout $end
+$var reg 1 2& sync_reg1 $end
+$var reg 1 /& sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 3& delay [2:0] $end
+$var wire 1 .& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 1& dout $end
+$var reg 8 4& shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 5& decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 6& input_spikes [7:0] $end
+$var wire 6 7& refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 8& threshold [5:0] $end
+$var wire 16 9& weights [15:0] $end
+$var wire 1 H% spike_out $end
+$var wire 6 :& membrane_potential_out [5:0] $end
+$var wire 6 ;& input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 <& input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 =& weights [15:0] $end
+$var reg 6 >& current_sum [5:0] $end
+$var reg 6 ?& input_current [5:0] $end
+$var integer 32 @& i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 A& decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 B& input_current [5:0] $end
+$var wire 6 C& membrane_potential_out [5:0] $end
+$var wire 6 D& refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 E& threshold [5:0] $end
+$var wire 8 F& potential_update [7:0] $end
+$var reg 6 G& membrane_potential [5:0] $end
+$var reg 6 H& refractory_counter [5:0] $end
+$var reg 1 H% spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[4] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 I& decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 J& delay_values [23:0] $end
+$var wire 8 K& delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 L& input_spikes [7:0] $end
+$var wire 6 M& refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 N& threshold [5:0] $end
+$var wire 16 O& weights [15:0] $end
+$var wire 1 P& spike_out $end
+$var wire 6 Q& membrane_potential_out [5:0] $end
+$var wire 8 R& delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 S& delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 T& delay_value [2:0] $end
+$var wire 1 U& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 V& sync_dout $end
+$var wire 1 W& dout $end
+$var wire 1 X& delayed_dout $end
+$var reg 1 Y& sync_reg1 $end
+$var reg 1 V& sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 Z& delay [2:0] $end
+$var wire 1 U& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 X& dout $end
+$var reg 8 [& shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 \& delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 ]& delay_value [2:0] $end
+$var wire 1 ^& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 _& sync_dout $end
+$var wire 1 `& dout $end
+$var wire 1 a& delayed_dout $end
+$var reg 1 b& sync_reg1 $end
+$var reg 1 _& sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 c& delay [2:0] $end
+$var wire 1 ^& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 a& dout $end
+$var reg 8 d& shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 e& delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 f& delay_value [2:0] $end
+$var wire 1 g& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 h& sync_dout $end
+$var wire 1 i& dout $end
+$var wire 1 j& delayed_dout $end
+$var reg 1 k& sync_reg1 $end
+$var reg 1 h& sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 l& delay [2:0] $end
+$var wire 1 g& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 j& dout $end
+$var reg 8 m& shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 n& delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 o& delay_value [2:0] $end
+$var wire 1 p& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 q& sync_dout $end
+$var wire 1 r& dout $end
+$var wire 1 s& delayed_dout $end
+$var reg 1 t& sync_reg1 $end
+$var reg 1 q& sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 u& delay [2:0] $end
+$var wire 1 p& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 s& dout $end
+$var reg 8 v& shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 w& delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 x& delay_value [2:0] $end
+$var wire 1 y& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 z& sync_dout $end
+$var wire 1 {& dout $end
+$var wire 1 |& delayed_dout $end
+$var reg 1 }& sync_reg1 $end
+$var reg 1 z& sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 ~& delay [2:0] $end
+$var wire 1 y& din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 |& dout $end
+$var reg 8 !' shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 "' delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 #' delay_value [2:0] $end
+$var wire 1 $' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 %' sync_dout $end
+$var wire 1 &' dout $end
+$var wire 1 '' delayed_dout $end
+$var reg 1 (' sync_reg1 $end
+$var reg 1 %' sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 )' delay [2:0] $end
+$var wire 1 $' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 '' dout $end
+$var reg 8 *' shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 +' delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 ,' delay_value [2:0] $end
+$var wire 1 -' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 .' sync_dout $end
+$var wire 1 /' dout $end
+$var wire 1 0' delayed_dout $end
+$var reg 1 1' sync_reg1 $end
+$var reg 1 .' sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 2' delay [2:0] $end
+$var wire 1 -' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 0' dout $end
+$var reg 8 3' shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 4' delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 5' delay_value [2:0] $end
+$var wire 1 6' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 7' sync_dout $end
+$var wire 1 8' dout $end
+$var wire 1 9' delayed_dout $end
+$var reg 1 :' sync_reg1 $end
+$var reg 1 7' sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 ;' delay [2:0] $end
+$var wire 1 6' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 9' dout $end
+$var reg 8 <' shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 =' decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 >' input_spikes [7:0] $end
+$var wire 6 ?' refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 @' threshold [5:0] $end
+$var wire 16 A' weights [15:0] $end
+$var wire 1 P& spike_out $end
+$var wire 6 B' membrane_potential_out [5:0] $end
+$var wire 6 C' input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 D' input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 E' weights [15:0] $end
+$var reg 6 F' current_sum [5:0] $end
+$var reg 6 G' input_current [5:0] $end
+$var integer 32 H' i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 I' decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 J' input_current [5:0] $end
+$var wire 6 K' membrane_potential_out [5:0] $end
+$var wire 6 L' refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 M' threshold [5:0] $end
+$var wire 8 N' potential_update [7:0] $end
+$var reg 6 O' membrane_potential [5:0] $end
+$var reg 6 P' refractory_counter [5:0] $end
+$var reg 1 P& spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[5] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 Q' decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 R' delay_values [23:0] $end
+$var wire 8 S' delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 T' input_spikes [7:0] $end
+$var wire 6 U' refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 V' threshold [5:0] $end
+$var wire 16 W' weights [15:0] $end
+$var wire 1 X' spike_out $end
+$var wire 6 Y' membrane_potential_out [5:0] $end
+$var wire 8 Z' delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 [' delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 \' delay_value [2:0] $end
+$var wire 1 ]' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 ^' sync_dout $end
+$var wire 1 _' dout $end
+$var wire 1 `' delayed_dout $end
+$var reg 1 a' sync_reg1 $end
+$var reg 1 ^' sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 b' delay [2:0] $end
+$var wire 1 ]' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 `' dout $end
+$var reg 8 c' shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 d' delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 e' delay_value [2:0] $end
+$var wire 1 f' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 g' sync_dout $end
+$var wire 1 h' dout $end
+$var wire 1 i' delayed_dout $end
+$var reg 1 j' sync_reg1 $end
+$var reg 1 g' sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 k' delay [2:0] $end
+$var wire 1 f' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 i' dout $end
+$var reg 8 l' shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 m' delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 n' delay_value [2:0] $end
+$var wire 1 o' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 p' sync_dout $end
+$var wire 1 q' dout $end
+$var wire 1 r' delayed_dout $end
+$var reg 1 s' sync_reg1 $end
+$var reg 1 p' sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 t' delay [2:0] $end
+$var wire 1 o' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 r' dout $end
+$var reg 8 u' shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 v' delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 w' delay_value [2:0] $end
+$var wire 1 x' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 y' sync_dout $end
+$var wire 1 z' dout $end
+$var wire 1 {' delayed_dout $end
+$var reg 1 |' sync_reg1 $end
+$var reg 1 y' sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 }' delay [2:0] $end
+$var wire 1 x' din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 {' dout $end
+$var reg 8 ~' shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 !( delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 "( delay_value [2:0] $end
+$var wire 1 #( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 $( sync_dout $end
+$var wire 1 %( dout $end
+$var wire 1 &( delayed_dout $end
+$var reg 1 '( sync_reg1 $end
+$var reg 1 $( sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 (( delay [2:0] $end
+$var wire 1 #( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 &( dout $end
+$var reg 8 )( shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 *( delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 +( delay_value [2:0] $end
+$var wire 1 ,( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 -( sync_dout $end
+$var wire 1 .( dout $end
+$var wire 1 /( delayed_dout $end
+$var reg 1 0( sync_reg1 $end
+$var reg 1 -( sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 1( delay [2:0] $end
+$var wire 1 ,( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 /( dout $end
+$var reg 8 2( shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 3( delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 4( delay_value [2:0] $end
+$var wire 1 5( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 6( sync_dout $end
+$var wire 1 7( dout $end
+$var wire 1 8( delayed_dout $end
+$var reg 1 9( sync_reg1 $end
+$var reg 1 6( sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 :( delay [2:0] $end
+$var wire 1 5( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 8( dout $end
+$var reg 8 ;( shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 <( delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 =( delay_value [2:0] $end
+$var wire 1 >( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 ?( sync_dout $end
+$var wire 1 @( dout $end
+$var wire 1 A( delayed_dout $end
+$var reg 1 B( sync_reg1 $end
+$var reg 1 ?( sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 C( delay [2:0] $end
+$var wire 1 >( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 A( dout $end
+$var reg 8 D( shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 E( decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 F( input_spikes [7:0] $end
+$var wire 6 G( refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 H( threshold [5:0] $end
+$var wire 16 I( weights [15:0] $end
+$var wire 1 X' spike_out $end
+$var wire 6 J( membrane_potential_out [5:0] $end
+$var wire 6 K( input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 L( input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 M( weights [15:0] $end
+$var reg 6 N( current_sum [5:0] $end
+$var reg 6 O( input_current [5:0] $end
+$var integer 32 P( i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 Q( decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 R( input_current [5:0] $end
+$var wire 6 S( membrane_potential_out [5:0] $end
+$var wire 6 T( refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 U( threshold [5:0] $end
+$var wire 8 V( potential_update [7:0] $end
+$var reg 6 W( membrane_potential [5:0] $end
+$var reg 6 X( refractory_counter [5:0] $end
+$var reg 1 X' spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[6] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 Y( decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 Z( delay_values [23:0] $end
+$var wire 8 [( delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 \( input_spikes [7:0] $end
+$var wire 6 ]( refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 ^( threshold [5:0] $end
+$var wire 16 _( weights [15:0] $end
+$var wire 1 `( spike_out $end
+$var wire 6 a( membrane_potential_out [5:0] $end
+$var wire 8 b( delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 c( delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 d( delay_value [2:0] $end
+$var wire 1 e( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 f( sync_dout $end
+$var wire 1 g( dout $end
+$var wire 1 h( delayed_dout $end
+$var reg 1 i( sync_reg1 $end
+$var reg 1 f( sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 j( delay [2:0] $end
+$var wire 1 e( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 h( dout $end
+$var reg 8 k( shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 l( delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 m( delay_value [2:0] $end
+$var wire 1 n( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 o( sync_dout $end
+$var wire 1 p( dout $end
+$var wire 1 q( delayed_dout $end
+$var reg 1 r( sync_reg1 $end
+$var reg 1 o( sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 s( delay [2:0] $end
+$var wire 1 n( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 q( dout $end
+$var reg 8 t( shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 u( delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 v( delay_value [2:0] $end
+$var wire 1 w( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 x( sync_dout $end
+$var wire 1 y( dout $end
+$var wire 1 z( delayed_dout $end
+$var reg 1 {( sync_reg1 $end
+$var reg 1 x( sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 |( delay [2:0] $end
+$var wire 1 w( din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 z( dout $end
+$var reg 8 }( shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 ~( delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 !) delay_value [2:0] $end
+$var wire 1 ") din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 #) sync_dout $end
+$var wire 1 $) dout $end
+$var wire 1 %) delayed_dout $end
+$var reg 1 &) sync_reg1 $end
+$var reg 1 #) sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 ') delay [2:0] $end
+$var wire 1 ") din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 %) dout $end
+$var reg 8 () shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 )) delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 *) delay_value [2:0] $end
+$var wire 1 +) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 ,) sync_dout $end
+$var wire 1 -) dout $end
+$var wire 1 .) delayed_dout $end
+$var reg 1 /) sync_reg1 $end
+$var reg 1 ,) sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 0) delay [2:0] $end
+$var wire 1 +) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 .) dout $end
+$var reg 8 1) shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 2) delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 3) delay_value [2:0] $end
+$var wire 1 4) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 5) sync_dout $end
+$var wire 1 6) dout $end
+$var wire 1 7) delayed_dout $end
+$var reg 1 8) sync_reg1 $end
+$var reg 1 5) sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 9) delay [2:0] $end
+$var wire 1 4) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 7) dout $end
+$var reg 8 :) shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 ;) delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 <) delay_value [2:0] $end
+$var wire 1 =) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 >) sync_dout $end
+$var wire 1 ?) dout $end
+$var wire 1 @) delayed_dout $end
+$var reg 1 A) sync_reg1 $end
+$var reg 1 >) sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 B) delay [2:0] $end
+$var wire 1 =) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 @) dout $end
+$var reg 8 C) shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 D) delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 E) delay_value [2:0] $end
+$var wire 1 F) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 G) sync_dout $end
+$var wire 1 H) dout $end
+$var wire 1 I) delayed_dout $end
+$var reg 1 J) sync_reg1 $end
+$var reg 1 G) sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 K) delay [2:0] $end
+$var wire 1 F) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 I) dout $end
+$var reg 8 L) shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 M) decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 N) input_spikes [7:0] $end
+$var wire 6 O) refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 P) threshold [5:0] $end
+$var wire 16 Q) weights [15:0] $end
+$var wire 1 `( spike_out $end
+$var wire 6 R) membrane_potential_out [5:0] $end
+$var wire 6 S) input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 T) input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 U) weights [15:0] $end
+$var reg 6 V) current_sum [5:0] $end
+$var reg 6 W) input_current [5:0] $end
+$var integer 32 X) i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 Y) decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 Z) input_current [5:0] $end
+$var wire 6 [) membrane_potential_out [5:0] $end
+$var wire 6 \) refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 ]) threshold [5:0] $end
+$var wire 8 ^) potential_update [7:0] $end
+$var reg 6 _) membrane_potential [5:0] $end
+$var reg 6 `) refractory_counter [5:0] $end
+$var reg 1 `( spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[7] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 a) decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 b) delay_values [23:0] $end
+$var wire 8 c) delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 d) input_spikes [7:0] $end
+$var wire 6 e) refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 f) threshold [5:0] $end
+$var wire 16 g) weights [15:0] $end
+$var wire 1 h) spike_out $end
+$var wire 6 i) membrane_potential_out [5:0] $end
+$var wire 8 j) delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 k) delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 l) delay_value [2:0] $end
+$var wire 1 m) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 n) sync_dout $end
+$var wire 1 o) dout $end
+$var wire 1 p) delayed_dout $end
+$var reg 1 q) sync_reg1 $end
+$var reg 1 n) sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 r) delay [2:0] $end
+$var wire 1 m) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 p) dout $end
+$var reg 8 s) shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 t) delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 u) delay_value [2:0] $end
+$var wire 1 v) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 w) sync_dout $end
+$var wire 1 x) dout $end
+$var wire 1 y) delayed_dout $end
+$var reg 1 z) sync_reg1 $end
+$var reg 1 w) sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 {) delay [2:0] $end
+$var wire 1 v) din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 y) dout $end
+$var reg 8 |) shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 }) delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 ~) delay_value [2:0] $end
+$var wire 1 !* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 "* sync_dout $end
+$var wire 1 #* dout $end
+$var wire 1 $* delayed_dout $end
+$var reg 1 %* sync_reg1 $end
+$var reg 1 "* sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 &* delay [2:0] $end
+$var wire 1 !* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $* dout $end
+$var reg 8 '* shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 (* delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 )* delay_value [2:0] $end
+$var wire 1 ** din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 +* sync_dout $end
+$var wire 1 ,* dout $end
+$var wire 1 -* delayed_dout $end
+$var reg 1 .* sync_reg1 $end
+$var reg 1 +* sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 /* delay [2:0] $end
+$var wire 1 ** din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 -* dout $end
+$var reg 8 0* shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 1* delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 2* delay_value [2:0] $end
+$var wire 1 3* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 4* sync_dout $end
+$var wire 1 5* dout $end
+$var wire 1 6* delayed_dout $end
+$var reg 1 7* sync_reg1 $end
+$var reg 1 4* sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 8* delay [2:0] $end
+$var wire 1 3* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 6* dout $end
+$var reg 8 9* shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 :* delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 ;* delay_value [2:0] $end
+$var wire 1 <* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 =* sync_dout $end
+$var wire 1 >* dout $end
+$var wire 1 ?* delayed_dout $end
+$var reg 1 @* sync_reg1 $end
+$var reg 1 =* sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 A* delay [2:0] $end
+$var wire 1 <* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 ?* dout $end
+$var reg 8 B* shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 C* delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 D* delay_value [2:0] $end
+$var wire 1 E* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 F* sync_dout $end
+$var wire 1 G* dout $end
+$var wire 1 H* delayed_dout $end
+$var reg 1 I* sync_reg1 $end
+$var reg 1 F* sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 J* delay [2:0] $end
+$var wire 1 E* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 H* dout $end
+$var reg 8 K* shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 L* delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 M* delay_value [2:0] $end
+$var wire 1 N* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 O* sync_dout $end
+$var wire 1 P* dout $end
+$var wire 1 Q* delayed_dout $end
+$var reg 1 R* sync_reg1 $end
+$var reg 1 O* sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 S* delay [2:0] $end
+$var wire 1 N* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 Q* dout $end
+$var reg 8 T* shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 U* decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 V* input_spikes [7:0] $end
+$var wire 6 W* refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 X* threshold [5:0] $end
+$var wire 16 Y* weights [15:0] $end
+$var wire 1 h) spike_out $end
+$var wire 6 Z* membrane_potential_out [5:0] $end
+$var wire 6 [* input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 \* input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 ]* weights [15:0] $end
+$var reg 6 ^* current_sum [5:0] $end
+$var reg 6 _* input_current [5:0] $end
+$var integer 32 `* i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 a* decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 b* input_current [5:0] $end
+$var wire 6 c* membrane_potential_out [5:0] $end
+$var wire 6 d* refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 e* threshold [5:0] $end
+$var wire 8 f* potential_update [7:0] $end
+$var reg 6 g* membrane_potential [5:0] $end
+$var reg 6 h* refractory_counter [5:0] $end
+$var reg 1 h) spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module layer2 $end
+$var wire 1 $ clk $end
+$var wire 6 i* decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 192 j* delay_values [191:0] $end
+$var wire 64 k* delays [63:0] $end
+$var wire 1 9 enable $end
+$var wire 8 l* input_spikes [7:0] $end
+$var wire 6 m* refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 n* threshold [5:0] $end
+$var wire 128 o* weights [127:0] $end
+$var wire 8 p* output_spikes [7:0] $end
+$var wire 48 q* membrane_potential_out [47:0] $end
+$scope begin neuron_gen[0] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 r* decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 s* delay_values [23:0] $end
+$var wire 8 t* delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 u* input_spikes [7:0] $end
+$var wire 6 v* refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 w* threshold [5:0] $end
+$var wire 16 x* weights [15:0] $end
+$var wire 1 y* spike_out $end
+$var wire 6 z* membrane_potential_out [5:0] $end
+$var wire 8 {* delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 |* delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 }* delay_value [2:0] $end
+$var wire 1 ~* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 !+ sync_dout $end
+$var wire 1 "+ dout $end
+$var wire 1 #+ delayed_dout $end
+$var reg 1 $+ sync_reg1 $end
+$var reg 1 !+ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 %+ delay [2:0] $end
+$var wire 1 ~* din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 #+ dout $end
+$var reg 8 &+ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 '+ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 (+ delay_value [2:0] $end
+$var wire 1 )+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 *+ sync_dout $end
+$var wire 1 ++ dout $end
+$var wire 1 ,+ delayed_dout $end
+$var reg 1 -+ sync_reg1 $end
+$var reg 1 *+ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 .+ delay [2:0] $end
+$var wire 1 )+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 ,+ dout $end
+$var reg 8 /+ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 0+ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 1+ delay_value [2:0] $end
+$var wire 1 2+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 3+ sync_dout $end
+$var wire 1 4+ dout $end
+$var wire 1 5+ delayed_dout $end
+$var reg 1 6+ sync_reg1 $end
+$var reg 1 3+ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 7+ delay [2:0] $end
+$var wire 1 2+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 5+ dout $end
+$var reg 8 8+ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 9+ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 :+ delay_value [2:0] $end
+$var wire 1 ;+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 <+ sync_dout $end
+$var wire 1 =+ dout $end
+$var wire 1 >+ delayed_dout $end
+$var reg 1 ?+ sync_reg1 $end
+$var reg 1 <+ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 @+ delay [2:0] $end
+$var wire 1 ;+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 >+ dout $end
+$var reg 8 A+ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 B+ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 C+ delay_value [2:0] $end
+$var wire 1 D+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 E+ sync_dout $end
+$var wire 1 F+ dout $end
+$var wire 1 G+ delayed_dout $end
+$var reg 1 H+ sync_reg1 $end
+$var reg 1 E+ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 I+ delay [2:0] $end
+$var wire 1 D+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 G+ dout $end
+$var reg 8 J+ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 K+ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 L+ delay_value [2:0] $end
+$var wire 1 M+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 N+ sync_dout $end
+$var wire 1 O+ dout $end
+$var wire 1 P+ delayed_dout $end
+$var reg 1 Q+ sync_reg1 $end
+$var reg 1 N+ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 R+ delay [2:0] $end
+$var wire 1 M+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 P+ dout $end
+$var reg 8 S+ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 T+ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 U+ delay_value [2:0] $end
+$var wire 1 V+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 W+ sync_dout $end
+$var wire 1 X+ dout $end
+$var wire 1 Y+ delayed_dout $end
+$var reg 1 Z+ sync_reg1 $end
+$var reg 1 W+ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 [+ delay [2:0] $end
+$var wire 1 V+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 Y+ dout $end
+$var reg 8 \+ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 ]+ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 ^+ delay_value [2:0] $end
+$var wire 1 _+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 `+ sync_dout $end
+$var wire 1 a+ dout $end
+$var wire 1 b+ delayed_dout $end
+$var reg 1 c+ sync_reg1 $end
+$var reg 1 `+ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 d+ delay [2:0] $end
+$var wire 1 _+ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 b+ dout $end
+$var reg 8 e+ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 f+ decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 g+ input_spikes [7:0] $end
+$var wire 6 h+ refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 i+ threshold [5:0] $end
+$var wire 16 j+ weights [15:0] $end
+$var wire 1 y* spike_out $end
+$var wire 6 k+ membrane_potential_out [5:0] $end
+$var wire 6 l+ input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 m+ input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 n+ weights [15:0] $end
+$var reg 6 o+ current_sum [5:0] $end
+$var reg 6 p+ input_current [5:0] $end
+$var integer 32 q+ i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 r+ decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 s+ input_current [5:0] $end
+$var wire 6 t+ membrane_potential_out [5:0] $end
+$var wire 6 u+ refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 v+ threshold [5:0] $end
+$var wire 8 w+ potential_update [7:0] $end
+$var reg 6 x+ membrane_potential [5:0] $end
+$var reg 6 y+ refractory_counter [5:0] $end
+$var reg 1 y* spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[1] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 z+ decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 {+ delay_values [23:0] $end
+$var wire 8 |+ delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 }+ input_spikes [7:0] $end
+$var wire 6 ~+ refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 !, threshold [5:0] $end
+$var wire 16 ", weights [15:0] $end
+$var wire 1 #, spike_out $end
+$var wire 6 $, membrane_potential_out [5:0] $end
+$var wire 8 %, delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 &, delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 ', delay_value [2:0] $end
+$var wire 1 (, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 ), sync_dout $end
+$var wire 1 *, dout $end
+$var wire 1 +, delayed_dout $end
+$var reg 1 ,, sync_reg1 $end
+$var reg 1 ), sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 -, delay [2:0] $end
+$var wire 1 (, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 +, dout $end
+$var reg 8 ., shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 /, delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 0, delay_value [2:0] $end
+$var wire 1 1, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 2, sync_dout $end
+$var wire 1 3, dout $end
+$var wire 1 4, delayed_dout $end
+$var reg 1 5, sync_reg1 $end
+$var reg 1 2, sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 6, delay [2:0] $end
+$var wire 1 1, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 4, dout $end
+$var reg 8 7, shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 8, delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 9, delay_value [2:0] $end
+$var wire 1 :, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 ;, sync_dout $end
+$var wire 1 <, dout $end
+$var wire 1 =, delayed_dout $end
+$var reg 1 >, sync_reg1 $end
+$var reg 1 ;, sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 ?, delay [2:0] $end
+$var wire 1 :, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 =, dout $end
+$var reg 8 @, shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 A, delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 B, delay_value [2:0] $end
+$var wire 1 C, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 D, sync_dout $end
+$var wire 1 E, dout $end
+$var wire 1 F, delayed_dout $end
+$var reg 1 G, sync_reg1 $end
+$var reg 1 D, sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 H, delay [2:0] $end
+$var wire 1 C, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 F, dout $end
+$var reg 8 I, shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 J, delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 K, delay_value [2:0] $end
+$var wire 1 L, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 M, sync_dout $end
+$var wire 1 N, dout $end
+$var wire 1 O, delayed_dout $end
+$var reg 1 P, sync_reg1 $end
+$var reg 1 M, sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 Q, delay [2:0] $end
+$var wire 1 L, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 O, dout $end
+$var reg 8 R, shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 S, delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 T, delay_value [2:0] $end
+$var wire 1 U, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 V, sync_dout $end
+$var wire 1 W, dout $end
+$var wire 1 X, delayed_dout $end
+$var reg 1 Y, sync_reg1 $end
+$var reg 1 V, sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 Z, delay [2:0] $end
+$var wire 1 U, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 X, dout $end
+$var reg 8 [, shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 \, delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 ], delay_value [2:0] $end
+$var wire 1 ^, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 _, sync_dout $end
+$var wire 1 `, dout $end
+$var wire 1 a, delayed_dout $end
+$var reg 1 b, sync_reg1 $end
+$var reg 1 _, sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 c, delay [2:0] $end
+$var wire 1 ^, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 a, dout $end
+$var reg 8 d, shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 e, delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 f, delay_value [2:0] $end
+$var wire 1 g, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 h, sync_dout $end
+$var wire 1 i, dout $end
+$var wire 1 j, delayed_dout $end
+$var reg 1 k, sync_reg1 $end
+$var reg 1 h, sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 l, delay [2:0] $end
+$var wire 1 g, din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 j, dout $end
+$var reg 8 m, shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 n, decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 o, input_spikes [7:0] $end
+$var wire 6 p, refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 q, threshold [5:0] $end
+$var wire 16 r, weights [15:0] $end
+$var wire 1 #, spike_out $end
+$var wire 6 s, membrane_potential_out [5:0] $end
+$var wire 6 t, input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 u, input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 v, weights [15:0] $end
+$var reg 6 w, current_sum [5:0] $end
+$var reg 6 x, input_current [5:0] $end
+$var integer 32 y, i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 z, decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 {, input_current [5:0] $end
+$var wire 6 |, membrane_potential_out [5:0] $end
+$var wire 6 }, refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 ~, threshold [5:0] $end
+$var wire 8 !- potential_update [7:0] $end
+$var reg 6 "- membrane_potential [5:0] $end
+$var reg 6 #- refractory_counter [5:0] $end
+$var reg 1 #, spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[2] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 $- decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 %- delay_values [23:0] $end
+$var wire 8 &- delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 '- input_spikes [7:0] $end
+$var wire 6 (- refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 )- threshold [5:0] $end
+$var wire 16 *- weights [15:0] $end
+$var wire 1 +- spike_out $end
+$var wire 6 ,- membrane_potential_out [5:0] $end
+$var wire 8 -- delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 .- delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 /- delay_value [2:0] $end
+$var wire 1 0- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 1- sync_dout $end
+$var wire 1 2- dout $end
+$var wire 1 3- delayed_dout $end
+$var reg 1 4- sync_reg1 $end
+$var reg 1 1- sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 5- delay [2:0] $end
+$var wire 1 0- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 3- dout $end
+$var reg 8 6- shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 7- delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 8- delay_value [2:0] $end
+$var wire 1 9- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 :- sync_dout $end
+$var wire 1 ;- dout $end
+$var wire 1 <- delayed_dout $end
+$var reg 1 =- sync_reg1 $end
+$var reg 1 :- sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 >- delay [2:0] $end
+$var wire 1 9- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 <- dout $end
+$var reg 8 ?- shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 @- delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 A- delay_value [2:0] $end
+$var wire 1 B- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 C- sync_dout $end
+$var wire 1 D- dout $end
+$var wire 1 E- delayed_dout $end
+$var reg 1 F- sync_reg1 $end
+$var reg 1 C- sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 G- delay [2:0] $end
+$var wire 1 B- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 E- dout $end
+$var reg 8 H- shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 I- delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 J- delay_value [2:0] $end
+$var wire 1 K- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 L- sync_dout $end
+$var wire 1 M- dout $end
+$var wire 1 N- delayed_dout $end
+$var reg 1 O- sync_reg1 $end
+$var reg 1 L- sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 P- delay [2:0] $end
+$var wire 1 K- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 N- dout $end
+$var reg 8 Q- shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 R- delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 S- delay_value [2:0] $end
+$var wire 1 T- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 U- sync_dout $end
+$var wire 1 V- dout $end
+$var wire 1 W- delayed_dout $end
+$var reg 1 X- sync_reg1 $end
+$var reg 1 U- sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 Y- delay [2:0] $end
+$var wire 1 T- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 W- dout $end
+$var reg 8 Z- shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 [- delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 \- delay_value [2:0] $end
+$var wire 1 ]- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 ^- sync_dout $end
+$var wire 1 _- dout $end
+$var wire 1 `- delayed_dout $end
+$var reg 1 a- sync_reg1 $end
+$var reg 1 ^- sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 b- delay [2:0] $end
+$var wire 1 ]- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 `- dout $end
+$var reg 8 c- shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 d- delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 e- delay_value [2:0] $end
+$var wire 1 f- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 g- sync_dout $end
+$var wire 1 h- dout $end
+$var wire 1 i- delayed_dout $end
+$var reg 1 j- sync_reg1 $end
+$var reg 1 g- sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 k- delay [2:0] $end
+$var wire 1 f- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 i- dout $end
+$var reg 8 l- shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 m- delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 n- delay_value [2:0] $end
+$var wire 1 o- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 p- sync_dout $end
+$var wire 1 q- dout $end
+$var wire 1 r- delayed_dout $end
+$var reg 1 s- sync_reg1 $end
+$var reg 1 p- sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 t- delay [2:0] $end
+$var wire 1 o- din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 r- dout $end
+$var reg 8 u- shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 v- decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 w- input_spikes [7:0] $end
+$var wire 6 x- refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 y- threshold [5:0] $end
+$var wire 16 z- weights [15:0] $end
+$var wire 1 +- spike_out $end
+$var wire 6 {- membrane_potential_out [5:0] $end
+$var wire 6 |- input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 }- input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 ~- weights [15:0] $end
+$var reg 6 !. current_sum [5:0] $end
+$var reg 6 ". input_current [5:0] $end
+$var integer 32 #. i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 $. decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 %. input_current [5:0] $end
+$var wire 6 &. membrane_potential_out [5:0] $end
+$var wire 6 '. refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 (. threshold [5:0] $end
+$var wire 8 ). potential_update [7:0] $end
+$var reg 6 *. membrane_potential [5:0] $end
+$var reg 6 +. refractory_counter [5:0] $end
+$var reg 1 +- spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[3] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 ,. decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 -. delay_values [23:0] $end
+$var wire 8 .. delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 /. input_spikes [7:0] $end
+$var wire 6 0. refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 1. threshold [5:0] $end
+$var wire 16 2. weights [15:0] $end
+$var wire 1 3. spike_out $end
+$var wire 6 4. membrane_potential_out [5:0] $end
+$var wire 8 5. delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 6. delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 7. delay_value [2:0] $end
+$var wire 1 8. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 9. sync_dout $end
+$var wire 1 :. dout $end
+$var wire 1 ;. delayed_dout $end
+$var reg 1 <. sync_reg1 $end
+$var reg 1 9. sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 =. delay [2:0] $end
+$var wire 1 8. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 ;. dout $end
+$var reg 8 >. shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 ?. delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 @. delay_value [2:0] $end
+$var wire 1 A. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 B. sync_dout $end
+$var wire 1 C. dout $end
+$var wire 1 D. delayed_dout $end
+$var reg 1 E. sync_reg1 $end
+$var reg 1 B. sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 F. delay [2:0] $end
+$var wire 1 A. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 D. dout $end
+$var reg 8 G. shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 H. delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 I. delay_value [2:0] $end
+$var wire 1 J. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 K. sync_dout $end
+$var wire 1 L. dout $end
+$var wire 1 M. delayed_dout $end
+$var reg 1 N. sync_reg1 $end
+$var reg 1 K. sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 O. delay [2:0] $end
+$var wire 1 J. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 M. dout $end
+$var reg 8 P. shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 Q. delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 R. delay_value [2:0] $end
+$var wire 1 S. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 T. sync_dout $end
+$var wire 1 U. dout $end
+$var wire 1 V. delayed_dout $end
+$var reg 1 W. sync_reg1 $end
+$var reg 1 T. sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 X. delay [2:0] $end
+$var wire 1 S. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 V. dout $end
+$var reg 8 Y. shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 Z. delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 [. delay_value [2:0] $end
+$var wire 1 \. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 ]. sync_dout $end
+$var wire 1 ^. dout $end
+$var wire 1 _. delayed_dout $end
+$var reg 1 `. sync_reg1 $end
+$var reg 1 ]. sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 a. delay [2:0] $end
+$var wire 1 \. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 _. dout $end
+$var reg 8 b. shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 c. delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 d. delay_value [2:0] $end
+$var wire 1 e. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 f. sync_dout $end
+$var wire 1 g. dout $end
+$var wire 1 h. delayed_dout $end
+$var reg 1 i. sync_reg1 $end
+$var reg 1 f. sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 j. delay [2:0] $end
+$var wire 1 e. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 h. dout $end
+$var reg 8 k. shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 l. delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 m. delay_value [2:0] $end
+$var wire 1 n. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 o. sync_dout $end
+$var wire 1 p. dout $end
+$var wire 1 q. delayed_dout $end
+$var reg 1 r. sync_reg1 $end
+$var reg 1 o. sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 s. delay [2:0] $end
+$var wire 1 n. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 q. dout $end
+$var reg 8 t. shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 u. delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 v. delay_value [2:0] $end
+$var wire 1 w. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 x. sync_dout $end
+$var wire 1 y. dout $end
+$var wire 1 z. delayed_dout $end
+$var reg 1 {. sync_reg1 $end
+$var reg 1 x. sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 |. delay [2:0] $end
+$var wire 1 w. din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 z. dout $end
+$var reg 8 }. shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 ~. decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 !/ input_spikes [7:0] $end
+$var wire 6 "/ refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 #/ threshold [5:0] $end
+$var wire 16 $/ weights [15:0] $end
+$var wire 1 3. spike_out $end
+$var wire 6 %/ membrane_potential_out [5:0] $end
+$var wire 6 &/ input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 '/ input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 (/ weights [15:0] $end
+$var reg 6 )/ current_sum [5:0] $end
+$var reg 6 */ input_current [5:0] $end
+$var integer 32 +/ i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 ,/ decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 -/ input_current [5:0] $end
+$var wire 6 ./ membrane_potential_out [5:0] $end
+$var wire 6 // refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 0/ threshold [5:0] $end
+$var wire 8 1/ potential_update [7:0] $end
+$var reg 6 2/ membrane_potential [5:0] $end
+$var reg 6 3/ refractory_counter [5:0] $end
+$var reg 1 3. spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[4] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 4/ decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 5/ delay_values [23:0] $end
+$var wire 8 6/ delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 7/ input_spikes [7:0] $end
+$var wire 6 8/ refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 9/ threshold [5:0] $end
+$var wire 16 :/ weights [15:0] $end
+$var wire 1 ;/ spike_out $end
+$var wire 6 </ membrane_potential_out [5:0] $end
+$var wire 8 =/ delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 >/ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 ?/ delay_value [2:0] $end
+$var wire 1 @/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 A/ sync_dout $end
+$var wire 1 B/ dout $end
+$var wire 1 C/ delayed_dout $end
+$var reg 1 D/ sync_reg1 $end
+$var reg 1 A/ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 E/ delay [2:0] $end
+$var wire 1 @/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 C/ dout $end
+$var reg 8 F/ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 G/ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 H/ delay_value [2:0] $end
+$var wire 1 I/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 J/ sync_dout $end
+$var wire 1 K/ dout $end
+$var wire 1 L/ delayed_dout $end
+$var reg 1 M/ sync_reg1 $end
+$var reg 1 J/ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 N/ delay [2:0] $end
+$var wire 1 I/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 L/ dout $end
+$var reg 8 O/ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 P/ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 Q/ delay_value [2:0] $end
+$var wire 1 R/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 S/ sync_dout $end
+$var wire 1 T/ dout $end
+$var wire 1 U/ delayed_dout $end
+$var reg 1 V/ sync_reg1 $end
+$var reg 1 S/ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 W/ delay [2:0] $end
+$var wire 1 R/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 U/ dout $end
+$var reg 8 X/ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 Y/ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 Z/ delay_value [2:0] $end
+$var wire 1 [/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 \/ sync_dout $end
+$var wire 1 ]/ dout $end
+$var wire 1 ^/ delayed_dout $end
+$var reg 1 _/ sync_reg1 $end
+$var reg 1 \/ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 `/ delay [2:0] $end
+$var wire 1 [/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 ^/ dout $end
+$var reg 8 a/ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 b/ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 c/ delay_value [2:0] $end
+$var wire 1 d/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 e/ sync_dout $end
+$var wire 1 f/ dout $end
+$var wire 1 g/ delayed_dout $end
+$var reg 1 h/ sync_reg1 $end
+$var reg 1 e/ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 i/ delay [2:0] $end
+$var wire 1 d/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 g/ dout $end
+$var reg 8 j/ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 k/ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 l/ delay_value [2:0] $end
+$var wire 1 m/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 n/ sync_dout $end
+$var wire 1 o/ dout $end
+$var wire 1 p/ delayed_dout $end
+$var reg 1 q/ sync_reg1 $end
+$var reg 1 n/ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 r/ delay [2:0] $end
+$var wire 1 m/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 p/ dout $end
+$var reg 8 s/ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 t/ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 u/ delay_value [2:0] $end
+$var wire 1 v/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 w/ sync_dout $end
+$var wire 1 x/ dout $end
+$var wire 1 y/ delayed_dout $end
+$var reg 1 z/ sync_reg1 $end
+$var reg 1 w/ sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 {/ delay [2:0] $end
+$var wire 1 v/ din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 y/ dout $end
+$var reg 8 |/ shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 }/ delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 ~/ delay_value [2:0] $end
+$var wire 1 !0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 "0 sync_dout $end
+$var wire 1 #0 dout $end
+$var wire 1 $0 delayed_dout $end
+$var reg 1 %0 sync_reg1 $end
+$var reg 1 "0 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 &0 delay [2:0] $end
+$var wire 1 !0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $0 dout $end
+$var reg 8 '0 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 (0 decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 )0 input_spikes [7:0] $end
+$var wire 6 *0 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 +0 threshold [5:0] $end
+$var wire 16 ,0 weights [15:0] $end
+$var wire 1 ;/ spike_out $end
+$var wire 6 -0 membrane_potential_out [5:0] $end
+$var wire 6 .0 input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 /0 input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 00 weights [15:0] $end
+$var reg 6 10 current_sum [5:0] $end
+$var reg 6 20 input_current [5:0] $end
+$var integer 32 30 i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 40 decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 50 input_current [5:0] $end
+$var wire 6 60 membrane_potential_out [5:0] $end
+$var wire 6 70 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 80 threshold [5:0] $end
+$var wire 8 90 potential_update [7:0] $end
+$var reg 6 :0 membrane_potential [5:0] $end
+$var reg 6 ;0 refractory_counter [5:0] $end
+$var reg 1 ;/ spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[5] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 <0 decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 =0 delay_values [23:0] $end
+$var wire 8 >0 delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 ?0 input_spikes [7:0] $end
+$var wire 6 @0 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 A0 threshold [5:0] $end
+$var wire 16 B0 weights [15:0] $end
+$var wire 1 C0 spike_out $end
+$var wire 6 D0 membrane_potential_out [5:0] $end
+$var wire 8 E0 delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 F0 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 G0 delay_value [2:0] $end
+$var wire 1 H0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 I0 sync_dout $end
+$var wire 1 J0 dout $end
+$var wire 1 K0 delayed_dout $end
+$var reg 1 L0 sync_reg1 $end
+$var reg 1 I0 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 M0 delay [2:0] $end
+$var wire 1 H0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 K0 dout $end
+$var reg 8 N0 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 O0 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 P0 delay_value [2:0] $end
+$var wire 1 Q0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 R0 sync_dout $end
+$var wire 1 S0 dout $end
+$var wire 1 T0 delayed_dout $end
+$var reg 1 U0 sync_reg1 $end
+$var reg 1 R0 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 V0 delay [2:0] $end
+$var wire 1 Q0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 T0 dout $end
+$var reg 8 W0 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 X0 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 Y0 delay_value [2:0] $end
+$var wire 1 Z0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 [0 sync_dout $end
+$var wire 1 \0 dout $end
+$var wire 1 ]0 delayed_dout $end
+$var reg 1 ^0 sync_reg1 $end
+$var reg 1 [0 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 _0 delay [2:0] $end
+$var wire 1 Z0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 ]0 dout $end
+$var reg 8 `0 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 a0 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 b0 delay_value [2:0] $end
+$var wire 1 c0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 d0 sync_dout $end
+$var wire 1 e0 dout $end
+$var wire 1 f0 delayed_dout $end
+$var reg 1 g0 sync_reg1 $end
+$var reg 1 d0 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 h0 delay [2:0] $end
+$var wire 1 c0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 f0 dout $end
+$var reg 8 i0 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 j0 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 k0 delay_value [2:0] $end
+$var wire 1 l0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 m0 sync_dout $end
+$var wire 1 n0 dout $end
+$var wire 1 o0 delayed_dout $end
+$var reg 1 p0 sync_reg1 $end
+$var reg 1 m0 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 q0 delay [2:0] $end
+$var wire 1 l0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 o0 dout $end
+$var reg 8 r0 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 s0 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 t0 delay_value [2:0] $end
+$var wire 1 u0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 v0 sync_dout $end
+$var wire 1 w0 dout $end
+$var wire 1 x0 delayed_dout $end
+$var reg 1 y0 sync_reg1 $end
+$var reg 1 v0 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 z0 delay [2:0] $end
+$var wire 1 u0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 x0 dout $end
+$var reg 8 {0 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 |0 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 }0 delay_value [2:0] $end
+$var wire 1 ~0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 !1 sync_dout $end
+$var wire 1 "1 dout $end
+$var wire 1 #1 delayed_dout $end
+$var reg 1 $1 sync_reg1 $end
+$var reg 1 !1 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 %1 delay [2:0] $end
+$var wire 1 ~0 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 #1 dout $end
+$var reg 8 &1 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 '1 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 (1 delay_value [2:0] $end
+$var wire 1 )1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 *1 sync_dout $end
+$var wire 1 +1 dout $end
+$var wire 1 ,1 delayed_dout $end
+$var reg 1 -1 sync_reg1 $end
+$var reg 1 *1 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 .1 delay [2:0] $end
+$var wire 1 )1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 ,1 dout $end
+$var reg 8 /1 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 01 decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 11 input_spikes [7:0] $end
+$var wire 6 21 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 31 threshold [5:0] $end
+$var wire 16 41 weights [15:0] $end
+$var wire 1 C0 spike_out $end
+$var wire 6 51 membrane_potential_out [5:0] $end
+$var wire 6 61 input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 71 input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 81 weights [15:0] $end
+$var reg 6 91 current_sum [5:0] $end
+$var reg 6 :1 input_current [5:0] $end
+$var integer 32 ;1 i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 <1 decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 =1 input_current [5:0] $end
+$var wire 6 >1 membrane_potential_out [5:0] $end
+$var wire 6 ?1 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 @1 threshold [5:0] $end
+$var wire 8 A1 potential_update [7:0] $end
+$var reg 6 B1 membrane_potential [5:0] $end
+$var reg 6 C1 refractory_counter [5:0] $end
+$var reg 1 C0 spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[6] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 D1 decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 E1 delay_values [23:0] $end
+$var wire 8 F1 delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 G1 input_spikes [7:0] $end
+$var wire 6 H1 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 I1 threshold [5:0] $end
+$var wire 16 J1 weights [15:0] $end
+$var wire 1 K1 spike_out $end
+$var wire 6 L1 membrane_potential_out [5:0] $end
+$var wire 8 M1 delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 N1 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 O1 delay_value [2:0] $end
+$var wire 1 P1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 Q1 sync_dout $end
+$var wire 1 R1 dout $end
+$var wire 1 S1 delayed_dout $end
+$var reg 1 T1 sync_reg1 $end
+$var reg 1 Q1 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 U1 delay [2:0] $end
+$var wire 1 P1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 S1 dout $end
+$var reg 8 V1 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 W1 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 X1 delay_value [2:0] $end
+$var wire 1 Y1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 Z1 sync_dout $end
+$var wire 1 [1 dout $end
+$var wire 1 \1 delayed_dout $end
+$var reg 1 ]1 sync_reg1 $end
+$var reg 1 Z1 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 ^1 delay [2:0] $end
+$var wire 1 Y1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 \1 dout $end
+$var reg 8 _1 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 `1 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 a1 delay_value [2:0] $end
+$var wire 1 b1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 c1 sync_dout $end
+$var wire 1 d1 dout $end
+$var wire 1 e1 delayed_dout $end
+$var reg 1 f1 sync_reg1 $end
+$var reg 1 c1 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 g1 delay [2:0] $end
+$var wire 1 b1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 e1 dout $end
+$var reg 8 h1 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 i1 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 j1 delay_value [2:0] $end
+$var wire 1 k1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 l1 sync_dout $end
+$var wire 1 m1 dout $end
+$var wire 1 n1 delayed_dout $end
+$var reg 1 o1 sync_reg1 $end
+$var reg 1 l1 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 p1 delay [2:0] $end
+$var wire 1 k1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 n1 dout $end
+$var reg 8 q1 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 r1 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 s1 delay_value [2:0] $end
+$var wire 1 t1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 u1 sync_dout $end
+$var wire 1 v1 dout $end
+$var wire 1 w1 delayed_dout $end
+$var reg 1 x1 sync_reg1 $end
+$var reg 1 u1 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 y1 delay [2:0] $end
+$var wire 1 t1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 w1 dout $end
+$var reg 8 z1 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 {1 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 |1 delay_value [2:0] $end
+$var wire 1 }1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 ~1 sync_dout $end
+$var wire 1 !2 dout $end
+$var wire 1 "2 delayed_dout $end
+$var reg 1 #2 sync_reg1 $end
+$var reg 1 ~1 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 $2 delay [2:0] $end
+$var wire 1 }1 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 "2 dout $end
+$var reg 8 %2 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 &2 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 '2 delay_value [2:0] $end
+$var wire 1 (2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 )2 sync_dout $end
+$var wire 1 *2 dout $end
+$var wire 1 +2 delayed_dout $end
+$var reg 1 ,2 sync_reg1 $end
+$var reg 1 )2 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 -2 delay [2:0] $end
+$var wire 1 (2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 +2 dout $end
+$var reg 8 .2 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 /2 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 02 delay_value [2:0] $end
+$var wire 1 12 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 22 sync_dout $end
+$var wire 1 32 dout $end
+$var wire 1 42 delayed_dout $end
+$var reg 1 52 sync_reg1 $end
+$var reg 1 22 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 62 delay [2:0] $end
+$var wire 1 12 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 42 dout $end
+$var reg 8 72 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 82 decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 92 input_spikes [7:0] $end
+$var wire 6 :2 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 ;2 threshold [5:0] $end
+$var wire 16 <2 weights [15:0] $end
+$var wire 1 K1 spike_out $end
+$var wire 6 =2 membrane_potential_out [5:0] $end
+$var wire 6 >2 input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 ?2 input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 @2 weights [15:0] $end
+$var reg 6 A2 current_sum [5:0] $end
+$var reg 6 B2 input_current [5:0] $end
+$var integer 32 C2 i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 D2 decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 E2 input_current [5:0] $end
+$var wire 6 F2 membrane_potential_out [5:0] $end
+$var wire 6 G2 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 H2 threshold [5:0] $end
+$var wire 8 I2 potential_update [7:0] $end
+$var reg 6 J2 membrane_potential [5:0] $end
+$var reg 6 K2 refractory_counter [5:0] $end
+$var reg 1 K1 spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_gen[7] $end
+$scope module neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 L2 decay [5:0] $end
+$var wire 1 I delay_clk $end
+$var wire 24 M2 delay_values [23:0] $end
+$var wire 8 N2 delays [7:0] $end
+$var wire 1 9 enable $end
+$var wire 8 O2 input_spikes [7:0] $end
+$var wire 6 P2 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 Q2 threshold [5:0] $end
+$var wire 16 R2 weights [15:0] $end
+$var wire 1 S2 spike_out $end
+$var wire 6 T2 membrane_potential_out [5:0] $end
+$var wire 8 U2 delayed_spikes [7:0] $end
+$scope begin neuron_delay_gen[0] $end
+$scope module neuron_delay_inst $end
+$var wire 1 V2 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 W2 delay_value [2:0] $end
+$var wire 1 X2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 Y2 sync_dout $end
+$var wire 1 Z2 dout $end
+$var wire 1 [2 delayed_dout $end
+$var reg 1 \2 sync_reg1 $end
+$var reg 1 Y2 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 ]2 delay [2:0] $end
+$var wire 1 X2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 [2 dout $end
+$var reg 8 ^2 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[1] $end
+$scope module neuron_delay_inst $end
+$var wire 1 _2 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 `2 delay_value [2:0] $end
+$var wire 1 a2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 b2 sync_dout $end
+$var wire 1 c2 dout $end
+$var wire 1 d2 delayed_dout $end
+$var reg 1 e2 sync_reg1 $end
+$var reg 1 b2 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 f2 delay [2:0] $end
+$var wire 1 a2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 d2 dout $end
+$var reg 8 g2 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[2] $end
+$scope module neuron_delay_inst $end
+$var wire 1 h2 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 i2 delay_value [2:0] $end
+$var wire 1 j2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 k2 sync_dout $end
+$var wire 1 l2 dout $end
+$var wire 1 m2 delayed_dout $end
+$var reg 1 n2 sync_reg1 $end
+$var reg 1 k2 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 o2 delay [2:0] $end
+$var wire 1 j2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 m2 dout $end
+$var reg 8 p2 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[3] $end
+$scope module neuron_delay_inst $end
+$var wire 1 q2 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 r2 delay_value [2:0] $end
+$var wire 1 s2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 t2 sync_dout $end
+$var wire 1 u2 dout $end
+$var wire 1 v2 delayed_dout $end
+$var reg 1 w2 sync_reg1 $end
+$var reg 1 t2 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 x2 delay [2:0] $end
+$var wire 1 s2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 v2 dout $end
+$var reg 8 y2 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[4] $end
+$scope module neuron_delay_inst $end
+$var wire 1 z2 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 {2 delay_value [2:0] $end
+$var wire 1 |2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 }2 sync_dout $end
+$var wire 1 ~2 dout $end
+$var wire 1 !3 delayed_dout $end
+$var reg 1 "3 sync_reg1 $end
+$var reg 1 }2 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 #3 delay [2:0] $end
+$var wire 1 |2 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 !3 dout $end
+$var reg 8 $3 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[5] $end
+$scope module neuron_delay_inst $end
+$var wire 1 %3 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 &3 delay_value [2:0] $end
+$var wire 1 '3 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 (3 sync_dout $end
+$var wire 1 )3 dout $end
+$var wire 1 *3 delayed_dout $end
+$var reg 1 +3 sync_reg1 $end
+$var reg 1 (3 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 ,3 delay [2:0] $end
+$var wire 1 '3 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 *3 dout $end
+$var reg 8 -3 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[6] $end
+$scope module neuron_delay_inst $end
+$var wire 1 .3 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 /3 delay_value [2:0] $end
+$var wire 1 03 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 13 sync_dout $end
+$var wire 1 23 dout $end
+$var wire 1 33 delayed_dout $end
+$var reg 1 43 sync_reg1 $end
+$var reg 1 13 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 53 delay [2:0] $end
+$var wire 1 03 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 33 dout $end
+$var reg 8 63 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin neuron_delay_gen[7] $end
+$scope module neuron_delay_inst $end
+$var wire 1 73 delay $end
+$var wire 1 I delay_clk $end
+$var wire 3 83 delay_value [2:0] $end
+$var wire 1 93 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 $ sys_clk $end
+$var wire 1 :3 sync_dout $end
+$var wire 1 ;3 dout $end
+$var wire 1 <3 delayed_dout $end
+$var reg 1 =3 sync_reg1 $end
+$var reg 1 :3 sync_reg2 $end
+$scope module pd $end
+$var wire 1 I clk $end
+$var wire 3 >3 delay [2:0] $end
+$var wire 1 93 din $end
+$var wire 1 9 enable $end
+$var wire 1 > reset $end
+$var wire 1 <3 dout $end
+$var reg 8 ?3 shift_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 @3 decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 8 A3 input_spikes [7:0] $end
+$var wire 6 B3 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 C3 threshold [5:0] $end
+$var wire 16 D3 weights [15:0] $end
+$var wire 1 S2 spike_out $end
+$var wire 6 E3 membrane_potential_out [5:0] $end
+$var wire 6 F3 input_current [5:0] $end
+$scope module input_current_calculator_inst $end
+$var wire 1 $ clk $end
+$var wire 1 9 enable $end
+$var wire 8 G3 input_spikes [7:0] $end
+$var wire 1 > reset $end
+$var wire 16 H3 weights [15:0] $end
+$var reg 6 I3 current_sum [5:0] $end
+$var reg 6 J3 input_current [5:0] $end
+$var integer 32 K3 i [31:0] $end
+$upscope $end
+$scope module lif_neuron_inst $end
+$var wire 1 $ clk $end
+$var wire 6 L3 decay [5:0] $end
+$var wire 1 9 enable $end
+$var wire 6 M3 input_current [5:0] $end
+$var wire 6 N3 membrane_potential_out [5:0] $end
+$var wire 6 O3 refractory_period [5:0] $end
+$var wire 1 > reset $end
+$var wire 6 P3 threshold [5:0] $end
+$var wire 8 Q3 potential_update [7:0] $end
+$var reg 6 R3 membrane_potential [5:0] $end
+$var reg 6 S3 refractory_counter [5:0] $end
+$var reg 1 S2 spike_out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module spi_inst $end
+$var wire 1 6 MOSI $end
+$var wire 1 S RESET $end
+$var wire 1 5 SCLK $end
+$var wire 8 T3 SPI_address_LSB_reg_out [7:0] $end
+$var wire 8 U3 SPI_address_MSB_reg_out [7:0] $end
+$var wire 8 V3 SPI_instruction_reg_in [7:0] $end
+$var wire 8 W3 SPI_instruction_reg_out [7:0] $end
+$var wire 1 8 SS $end
+$var wire 1 P clk_div_ready_reg_out $end
+$var wire 1 3 data_valid_out $end
+$var wire 1 M debug_config_ready_reg_out $end
+$var wire 1 E input_spike_ready_reg_out $end
+$var wire 1 X3 write_memory_enable $end
+$var wire 1 / spi_instruction_done $end
+$var wire 8 Y3 received_data [7:0] $end
+$var wire 1 Z3 input_spike_ready_reg_in $end
+$var wire 1 [3 input_spike_ready_reg_en $end
+$var wire 1 \3 debug_config_ready_reg_in $end
+$var wire 1 ]3 debug_config_ready_reg_en $end
+$var wire 1 ^3 data_valid $end
+$var wire 8 _3 data_to_send [7:0] $end
+$var wire 1 `3 clk_div_ready_reg_in $end
+$var wire 1 a3 clk_div_ready_reg_en $end
+$var wire 816 b3 all_data_out [815:0] $end
+$var wire 1 c3 SPI_instruction_reg_en $end
+$var wire 1 d3 SPI_address_MSB_reg_en $end
+$var wire 1 e3 SPI_address_LSB_reg_en $end
+$var wire 1 7 MISO $end
+$var reg 8 f3 LSB_Address_reg [7:0] $end
+$var reg 8 g3 MSB_Address_reg [7:0] $end
+$var reg 8 h3 SPI_instruction_reg [7:0] $end
+$var reg 1 i3 clk_div_ready_reg $end
+$var reg 1 j3 debug_config_ready_reg $end
+$var reg 1 k3 input_spike_ready_reg $end
+$scope module memory_inst $end
+$var wire 8 l3 addr [7:0] $end
+$var wire 8 m3 addr_reg_in [7:0] $end
+$var wire 1 5 clk $end
+$var wire 1 S reset $end
+$var wire 1 X3 write_enable $end
+$var wire 8 n3 data_in [7:0] $end
+$var reg 8 o3 addr_reg_out [7:0] $end
+$var reg 816 p3 all_data_out [815:0] $end
+$var reg 8 q3 data_out [7:0] $end
+$var integer 32 r3 j [31:0] $end
+$upscope $end
+$scope module spi_control_unit_inst $end
+$var wire 8 s3 SPI_instruction_reg_in [7:0] $end
+$var wire 8 t3 SPI_instruction_reg_out [7:0] $end
+$var wire 1 5 clk $end
+$var wire 1 8 cs $end
+$var wire 1 S reset $end
+$var wire 1 ^3 data_valid $end
+$var reg 1 e3 SPI_address_LSB_reg_en $end
+$var reg 1 d3 SPI_address_MSB_reg_en $end
+$var reg 1 c3 SPI_instruction_reg_en $end
+$var reg 1 `3 clk_div_ready $end
+$var reg 1 a3 clk_div_ready_en $end
+$var reg 3 u3 current_state [2:0] $end
+$var reg 1 \3 debug_config_ready $end
+$var reg 1 ]3 debug_config_ready_en $end
+$var reg 1 Z3 input_spike_ready $end
+$var reg 1 [3 input_spike_ready_en $end
+$var reg 3 v3 next_state [2:0] $end
+$var reg 1 / spi_instruction_done $end
+$var reg 1 X3 write_memory_enable $end
+$upscope $end
+$scope module spi_slave_inst $end
+$var wire 1 6 MOSI $end
+$var wire 1 S RESET $end
+$var wire 1 5 SCLK $end
+$var wire 1 8 SS $end
+$var wire 8 w3 data_to_send [7:0] $end
+$var reg 1 7 MISO $end
+$var reg 3 x3 bit_cnt [2:0] $end
+$var reg 1 ^3 data_valid $end
+$var reg 8 y3 received_data [7:0] $end
+$var reg 7 z3 shift_reg [6:0] $end
+$upscope $end
+$upscope $end
+$scope module u_SPI_reset $end
+$var wire 1 ) async_reset_n $end
+$var wire 1 5 clk $end
+$var wire 1 R sync_reset_n $end
+$var wire 1 {3 reset_ff2 $end
+$var wire 1 |3 reset_ff1 $end
+$scope module u_ff1 $end
+$var wire 1 ) async_reset_n $end
+$var wire 1 5 clk $end
+$var wire 1 }3 d $end
+$var reg 1 |3 q $end
+$upscope $end
+$scope module u_ff2 $end
+$var wire 1 ) async_reset_n $end
+$var wire 1 5 clk $end
+$var wire 1 |3 d $end
+$var reg 1 {3 q $end
+$upscope $end
+$upscope $end
+$scope module u_sys_clk_reset $end
+$var wire 1 ) async_reset_n $end
+$var wire 1 $ clk $end
+$var wire 1 = sync_reset_n $end
+$var wire 1 ~3 reset_ff2 $end
+$var wire 1 !4 reset_ff1 $end
+$scope module u_ff1 $end
+$var wire 1 ) async_reset_n $end
+$var wire 1 $ clk $end
+$var wire 1 "4 d $end
+$var reg 1 !4 q $end
+$upscope $end
+$scope module u_ff2 $end
+$var wire 1 ) async_reset_n $end
+$var wire 1 $ clk $end
+$var wire 1 !4 d $end
+$var reg 1 ~3 q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1"4
+0!4
+0~3
+1}3
+0|3
+0{3
+b0 z3
+b0 y3
+b0 x3
+b0 w3
+b1 v3
+b0 u3
+b0 t3
+b0 s3
+b1100110 r3
+b0 q3
+b0 p3
+b0 o3
+b0 n3
+b0 m3
+b0 l3
+0k3
+0j3
+0i3
+b0 h3
+b0 g3
+b0 f3
+0e3
+0d3
+0c3
+b0 b3
+0a3
+0`3
+b0 _3
+0^3
+0]3
+0\3
+0[3
+0Z3
+b0 Y3
+0X3
+b0 W3
+b0 V3
+b0 U3
+b0 T3
+b0 S3
+b0 R3
+b0 Q3
+b0 P3
+b0 O3
+b0 N3
+b0 M3
+b0 L3
+b1000 K3
+b0 J3
+b0 I3
+b0 H3
+b0 G3
+b0 F3
+b0 E3
+b0 D3
+b0 C3
+b0 B3
+b0 A3
+b0 @3
+b0 ?3
+b0 >3
+0=3
+0<3
+0;3
+0:3
+093
+b0 83
+073
+b0 63
+b0 53
+043
+033
+023
+013
+003
+b0 /3
+0.3
+b0 -3
+b0 ,3
+0+3
+0*3
+0)3
+0(3
+0'3
+b0 &3
+0%3
+b0 $3
+b0 #3
+0"3
+0!3
+0~2
+0}2
+0|2
+b0 {2
+0z2
+b0 y2
+b0 x2
+0w2
+0v2
+0u2
+0t2
+0s2
+b0 r2
+0q2
+b0 p2
+b0 o2
+0n2
+0m2
+0l2
+0k2
+0j2
+b0 i2
+0h2
+b0 g2
+b0 f2
+0e2
+0d2
+0c2
+0b2
+0a2
+b0 `2
+0_2
+b0 ^2
+b0 ]2
+0\2
+0[2
+0Z2
+0Y2
+0X2
+b0 W2
+0V2
+b0 U2
+b0 T2
+0S2
+b0 R2
+b0 Q2
+b0 P2
+b0 O2
+b0 N2
+b0 M2
+b0 L2
+b0 K2
+b0 J2
+b0 I2
+b0 H2
+b0 G2
+b0 F2
+b0 E2
+b0 D2
+b1000 C2
+b0 B2
+b0 A2
+b0 @2
+b0 ?2
+b0 >2
+b0 =2
+b0 <2
+b0 ;2
+b0 :2
+b0 92
+b0 82
+b0 72
+b0 62
+052
+042
+032
+022
+012
+b0 02
+0/2
+b0 .2
+b0 -2
+0,2
+0+2
+0*2
+0)2
+0(2
+b0 '2
+0&2
+b0 %2
+b0 $2
+0#2
+0"2
+0!2
+0~1
+0}1
+b0 |1
+0{1
+b0 z1
+b0 y1
+0x1
+0w1
+0v1
+0u1
+0t1
+b0 s1
+0r1
+b0 q1
+b0 p1
+0o1
+0n1
+0m1
+0l1
+0k1
+b0 j1
+0i1
+b0 h1
+b0 g1
+0f1
+0e1
+0d1
+0c1
+0b1
+b0 a1
+0`1
+b0 _1
+b0 ^1
+0]1
+0\1
+0[1
+0Z1
+0Y1
+b0 X1
+0W1
+b0 V1
+b0 U1
+0T1
+0S1
+0R1
+0Q1
+0P1
+b0 O1
+0N1
+b0 M1
+b0 L1
+0K1
+b0 J1
+b0 I1
+b0 H1
+b0 G1
+b0 F1
+b0 E1
+b0 D1
+b0 C1
+b0 B1
+b0 A1
+b0 @1
+b0 ?1
+b0 >1
+b0 =1
+b0 <1
+b1000 ;1
+b0 :1
+b0 91
+b0 81
+b0 71
+b0 61
+b0 51
+b0 41
+b0 31
+b0 21
+b0 11
+b0 01
+b0 /1
+b0 .1
+0-1
+0,1
+0+1
+0*1
+0)1
+b0 (1
+0'1
+b0 &1
+b0 %1
+0$1
+0#1
+0"1
+0!1
+0~0
+b0 }0
+0|0
+b0 {0
+b0 z0
+0y0
+0x0
+0w0
+0v0
+0u0
+b0 t0
+0s0
+b0 r0
+b0 q0
+0p0
+0o0
+0n0
+0m0
+0l0
+b0 k0
+0j0
+b0 i0
+b0 h0
+0g0
+0f0
+0e0
+0d0
+0c0
+b0 b0
+0a0
+b0 `0
+b0 _0
+0^0
+0]0
+0\0
+0[0
+0Z0
+b0 Y0
+0X0
+b0 W0
+b0 V0
+0U0
+0T0
+0S0
+0R0
+0Q0
+b0 P0
+0O0
+b0 N0
+b0 M0
+0L0
+0K0
+0J0
+0I0
+0H0
+b0 G0
+0F0
+b0 E0
+b0 D0
+0C0
+b0 B0
+b0 A0
+b0 @0
+b0 ?0
+b0 >0
+b0 =0
+b0 <0
+b0 ;0
+b0 :0
+b0 90
+b0 80
+b0 70
+b0 60
+b0 50
+b0 40
+b1000 30
+b0 20
+b0 10
+b0 00
+b0 /0
+b0 .0
+b0 -0
+b0 ,0
+b0 +0
+b0 *0
+b0 )0
+b0 (0
+b0 '0
+b0 &0
+0%0
+0$0
+0#0
+0"0
+0!0
+b0 ~/
+0}/
+b0 |/
+b0 {/
+0z/
+0y/
+0x/
+0w/
+0v/
+b0 u/
+0t/
+b0 s/
+b0 r/
+0q/
+0p/
+0o/
+0n/
+0m/
+b0 l/
+0k/
+b0 j/
+b0 i/
+0h/
+0g/
+0f/
+0e/
+0d/
+b0 c/
+0b/
+b0 a/
+b0 `/
+0_/
+0^/
+0]/
+0\/
+0[/
+b0 Z/
+0Y/
+b0 X/
+b0 W/
+0V/
+0U/
+0T/
+0S/
+0R/
+b0 Q/
+0P/
+b0 O/
+b0 N/
+0M/
+0L/
+0K/
+0J/
+0I/
+b0 H/
+0G/
+b0 F/
+b0 E/
+0D/
+0C/
+0B/
+0A/
+0@/
+b0 ?/
+0>/
+b0 =/
+b0 </
+0;/
+b0 :/
+b0 9/
+b0 8/
+b0 7/
+b0 6/
+b0 5/
+b0 4/
+b0 3/
+b0 2/
+b0 1/
+b0 0/
+b0 //
+b0 ./
+b0 -/
+b0 ,/
+b1000 +/
+b0 */
+b0 )/
+b0 (/
+b0 '/
+b0 &/
+b0 %/
+b0 $/
+b0 #/
+b0 "/
+b0 !/
+b0 ~.
+b0 }.
+b0 |.
+0{.
+0z.
+0y.
+0x.
+0w.
+b0 v.
+0u.
+b0 t.
+b0 s.
+0r.
+0q.
+0p.
+0o.
+0n.
+b0 m.
+0l.
+b0 k.
+b0 j.
+0i.
+0h.
+0g.
+0f.
+0e.
+b0 d.
+0c.
+b0 b.
+b0 a.
+0`.
+0_.
+0^.
+0].
+0\.
+b0 [.
+0Z.
+b0 Y.
+b0 X.
+0W.
+0V.
+0U.
+0T.
+0S.
+b0 R.
+0Q.
+b0 P.
+b0 O.
+0N.
+0M.
+0L.
+0K.
+0J.
+b0 I.
+0H.
+b0 G.
+b0 F.
+0E.
+0D.
+0C.
+0B.
+0A.
+b0 @.
+0?.
+b0 >.
+b0 =.
+0<.
+0;.
+0:.
+09.
+08.
+b0 7.
+06.
+b0 5.
+b0 4.
+03.
+b0 2.
+b0 1.
+b0 0.
+b0 /.
+b0 ..
+b0 -.
+b0 ,.
+b0 +.
+b0 *.
+b0 ).
+b0 (.
+b0 '.
+b0 &.
+b0 %.
+b0 $.
+b1000 #.
+b0 ".
+b0 !.
+b0 ~-
+b0 }-
+b0 |-
+b0 {-
+b0 z-
+b0 y-
+b0 x-
+b0 w-
+b0 v-
+b0 u-
+b0 t-
+0s-
+0r-
+0q-
+0p-
+0o-
+b0 n-
+0m-
+b0 l-
+b0 k-
+0j-
+0i-
+0h-
+0g-
+0f-
+b0 e-
+0d-
+b0 c-
+b0 b-
+0a-
+0`-
+0_-
+0^-
+0]-
+b0 \-
+0[-
+b0 Z-
+b0 Y-
+0X-
+0W-
+0V-
+0U-
+0T-
+b0 S-
+0R-
+b0 Q-
+b0 P-
+0O-
+0N-
+0M-
+0L-
+0K-
+b0 J-
+0I-
+b0 H-
+b0 G-
+0F-
+0E-
+0D-
+0C-
+0B-
+b0 A-
+0@-
+b0 ?-
+b0 >-
+0=-
+0<-
+0;-
+0:-
+09-
+b0 8-
+07-
+b0 6-
+b0 5-
+04-
+03-
+02-
+01-
+00-
+b0 /-
+0.-
+b0 --
+b0 ,-
+0+-
+b0 *-
+b0 )-
+b0 (-
+b0 '-
+b0 &-
+b0 %-
+b0 $-
+b0 #-
+b0 "-
+b0 !-
+b0 ~,
+b0 },
+b0 |,
+b0 {,
+b0 z,
+b1000 y,
+b0 x,
+b0 w,
+b0 v,
+b0 u,
+b0 t,
+b0 s,
+b0 r,
+b0 q,
+b0 p,
+b0 o,
+b0 n,
+b0 m,
+b0 l,
+0k,
+0j,
+0i,
+0h,
+0g,
+b0 f,
+0e,
+b0 d,
+b0 c,
+0b,
+0a,
+0`,
+0_,
+0^,
+b0 ],
+0\,
+b0 [,
+b0 Z,
+0Y,
+0X,
+0W,
+0V,
+0U,
+b0 T,
+0S,
+b0 R,
+b0 Q,
+0P,
+0O,
+0N,
+0M,
+0L,
+b0 K,
+0J,
+b0 I,
+b0 H,
+0G,
+0F,
+0E,
+0D,
+0C,
+b0 B,
+0A,
+b0 @,
+b0 ?,
+0>,
+0=,
+0<,
+0;,
+0:,
+b0 9,
+08,
+b0 7,
+b0 6,
+05,
+04,
+03,
+02,
+01,
+b0 0,
+0/,
+b0 .,
+b0 -,
+0,,
+0+,
+0*,
+0),
+0(,
+b0 ',
+0&,
+b0 %,
+b0 $,
+0#,
+b0 ",
+b0 !,
+b0 ~+
+b0 }+
+b0 |+
+b0 {+
+b0 z+
+b0 y+
+b0 x+
+b0 w+
+b0 v+
+b0 u+
+b0 t+
+b0 s+
+b0 r+
+b1000 q+
+b0 p+
+b0 o+
+b0 n+
+b0 m+
+b0 l+
+b0 k+
+b0 j+
+b0 i+
+b0 h+
+b0 g+
+b0 f+
+b0 e+
+b0 d+
+0c+
+0b+
+0a+
+0`+
+0_+
+b0 ^+
+0]+
+b0 \+
+b0 [+
+0Z+
+0Y+
+0X+
+0W+
+0V+
+b0 U+
+0T+
+b0 S+
+b0 R+
+0Q+
+0P+
+0O+
+0N+
+0M+
+b0 L+
+0K+
+b0 J+
+b0 I+
+0H+
+0G+
+0F+
+0E+
+0D+
+b0 C+
+0B+
+b0 A+
+b0 @+
+0?+
+0>+
+0=+
+0<+
+0;+
+b0 :+
+09+
+b0 8+
+b0 7+
+06+
+05+
+04+
+03+
+02+
+b0 1+
+00+
+b0 /+
+b0 .+
+0-+
+0,+
+0++
+0*+
+0)+
+b0 (+
+0'+
+b0 &+
+b0 %+
+0$+
+0#+
+0"+
+0!+
+0~*
+b0 }*
+0|*
+b0 {*
+b0 z*
+0y*
+b0 x*
+b0 w*
+b0 v*
+b0 u*
+b0 t*
+b0 s*
+b0 r*
+b0 q*
+b0 p*
+b0 o*
+b0 n*
+b0 m*
+b0 l*
+b0 k*
+b0 j*
+b0 i*
+b0 h*
+b0 g*
+b0 f*
+b0 e*
+b0 d*
+b0 c*
+b0 b*
+b0 a*
+b1000 `*
+b0 _*
+b0 ^*
+b0 ]*
+b0 \*
+b0 [*
+b0 Z*
+b0 Y*
+b0 X*
+b0 W*
+b0 V*
+b0 U*
+b0 T*
+b0 S*
+0R*
+0Q*
+0P*
+0O*
+0N*
+b0 M*
+0L*
+b0 K*
+b0 J*
+0I*
+0H*
+0G*
+0F*
+0E*
+b0 D*
+0C*
+b0 B*
+b0 A*
+0@*
+0?*
+0>*
+0=*
+0<*
+b0 ;*
+0:*
+b0 9*
+b0 8*
+07*
+06*
+05*
+04*
+03*
+b0 2*
+01*
+b0 0*
+b0 /*
+0.*
+0-*
+0,*
+0+*
+0**
+b0 )*
+0(*
+b0 '*
+b0 &*
+0%*
+0$*
+0#*
+0"*
+0!*
+b0 ~)
+0})
+b0 |)
+b0 {)
+0z)
+0y)
+0x)
+0w)
+0v)
+b0 u)
+0t)
+b0 s)
+b0 r)
+0q)
+0p)
+0o)
+0n)
+0m)
+b0 l)
+0k)
+b0 j)
+b0 i)
+0h)
+b0 g)
+b0 f)
+b0 e)
+b0 d)
+b0 c)
+b0 b)
+b0 a)
+b0 `)
+b0 _)
+b0 ^)
+b0 ])
+b0 \)
+b0 [)
+b0 Z)
+b0 Y)
+b1000 X)
+b0 W)
+b0 V)
+b0 U)
+b0 T)
+b0 S)
+b0 R)
+b0 Q)
+b0 P)
+b0 O)
+b0 N)
+b0 M)
+b0 L)
+b0 K)
+0J)
+0I)
+0H)
+0G)
+0F)
+b0 E)
+0D)
+b0 C)
+b0 B)
+0A)
+0@)
+0?)
+0>)
+0=)
+b0 <)
+0;)
+b0 :)
+b0 9)
+08)
+07)
+06)
+05)
+04)
+b0 3)
+02)
+b0 1)
+b0 0)
+0/)
+0.)
+0-)
+0,)
+0+)
+b0 *)
+0))
+b0 ()
+b0 ')
+0&)
+0%)
+0$)
+0#)
+0")
+b0 !)
+0~(
+b0 }(
+b0 |(
+0{(
+0z(
+0y(
+0x(
+0w(
+b0 v(
+0u(
+b0 t(
+b0 s(
+0r(
+0q(
+0p(
+0o(
+0n(
+b0 m(
+0l(
+b0 k(
+b0 j(
+0i(
+0h(
+0g(
+0f(
+0e(
+b0 d(
+0c(
+b0 b(
+b0 a(
+0`(
+b0 _(
+b0 ^(
+b0 ](
+b0 \(
+b0 [(
+b0 Z(
+b0 Y(
+b0 X(
+b0 W(
+b0 V(
+b0 U(
+b0 T(
+b0 S(
+b0 R(
+b0 Q(
+b1000 P(
+b0 O(
+b0 N(
+b0 M(
+b0 L(
+b0 K(
+b0 J(
+b0 I(
+b0 H(
+b0 G(
+b0 F(
+b0 E(
+b0 D(
+b0 C(
+0B(
+0A(
+0@(
+0?(
+0>(
+b0 =(
+0<(
+b0 ;(
+b0 :(
+09(
+08(
+07(
+06(
+05(
+b0 4(
+03(
+b0 2(
+b0 1(
+00(
+0/(
+0.(
+0-(
+0,(
+b0 +(
+0*(
+b0 )(
+b0 ((
+0'(
+0&(
+0%(
+0$(
+0#(
+b0 "(
+0!(
+b0 ~'
+b0 }'
+0|'
+0{'
+0z'
+0y'
+0x'
+b0 w'
+0v'
+b0 u'
+b0 t'
+0s'
+0r'
+0q'
+0p'
+0o'
+b0 n'
+0m'
+b0 l'
+b0 k'
+0j'
+0i'
+0h'
+0g'
+0f'
+b0 e'
+0d'
+b0 c'
+b0 b'
+0a'
+0`'
+0_'
+0^'
+0]'
+b0 \'
+0['
+b0 Z'
+b0 Y'
+0X'
+b0 W'
+b0 V'
+b0 U'
+b0 T'
+b0 S'
+b0 R'
+b0 Q'
+b0 P'
+b0 O'
+b0 N'
+b0 M'
+b0 L'
+b0 K'
+b0 J'
+b0 I'
+b1000 H'
+b0 G'
+b0 F'
+b0 E'
+b0 D'
+b0 C'
+b0 B'
+b0 A'
+b0 @'
+b0 ?'
+b0 >'
+b0 ='
+b0 <'
+b0 ;'
+0:'
+09'
+08'
+07'
+06'
+b0 5'
+04'
+b0 3'
+b0 2'
+01'
+00'
+0/'
+0.'
+0-'
+b0 ,'
+0+'
+b0 *'
+b0 )'
+0('
+0''
+0&'
+0%'
+0$'
+b0 #'
+0"'
+b0 !'
+b0 ~&
+0}&
+0|&
+0{&
+0z&
+0y&
+b0 x&
+0w&
+b0 v&
+b0 u&
+0t&
+0s&
+0r&
+0q&
+0p&
+b0 o&
+0n&
+b0 m&
+b0 l&
+0k&
+0j&
+0i&
+0h&
+0g&
+b0 f&
+0e&
+b0 d&
+b0 c&
+0b&
+0a&
+0`&
+0_&
+0^&
+b0 ]&
+0\&
+b0 [&
+b0 Z&
+0Y&
+0X&
+0W&
+0V&
+0U&
+b0 T&
+0S&
+b0 R&
+b0 Q&
+0P&
+b0 O&
+b0 N&
+b0 M&
+b0 L&
+b0 K&
+b0 J&
+b0 I&
+b0 H&
+b0 G&
+b0 F&
+b0 E&
+b0 D&
+b0 C&
+b0 B&
+b0 A&
+b1000 @&
+b0 ?&
+b0 >&
+b0 =&
+b0 <&
+b0 ;&
+b0 :&
+b0 9&
+b0 8&
+b0 7&
+b0 6&
+b0 5&
+b0 4&
+b0 3&
+02&
+01&
+00&
+0/&
+0.&
+b0 -&
+0,&
+b0 +&
+b0 *&
+0)&
+0(&
+0'&
+0&&
+0%&
+b0 $&
+0#&
+b0 "&
+b0 !&
+0~%
+0}%
+0|%
+0{%
+0z%
+b0 y%
+0x%
+b0 w%
+b0 v%
+0u%
+0t%
+0s%
+0r%
+0q%
+b0 p%
+0o%
+b0 n%
+b0 m%
+0l%
+0k%
+0j%
+0i%
+0h%
+b0 g%
+0f%
+b0 e%
+b0 d%
+0c%
+0b%
+0a%
+0`%
+0_%
+b0 ^%
+0]%
+b0 \%
+b0 [%
+0Z%
+0Y%
+0X%
+0W%
+0V%
+b0 U%
+0T%
+b0 S%
+b0 R%
+0Q%
+0P%
+0O%
+0N%
+0M%
+b0 L%
+0K%
+b0 J%
+b0 I%
+0H%
+b0 G%
+b0 F%
+b0 E%
+b0 D%
+b0 C%
+b0 B%
+b0 A%
+b0 @%
+b0 ?%
+b0 >%
+b0 =%
+b0 <%
+b0 ;%
+b0 :%
+b0 9%
+b1000 8%
+b0 7%
+b0 6%
+b0 5%
+b0 4%
+b0 3%
+b0 2%
+b0 1%
+b0 0%
+b0 /%
+b0 .%
+b0 -%
+b0 ,%
+b0 +%
+0*%
+0)%
+0(%
+0'%
+0&%
+b0 %%
+0$%
+b0 #%
+b0 "%
+0!%
+0~$
+0}$
+0|$
+0{$
+b0 z$
+0y$
+b0 x$
+b0 w$
+0v$
+0u$
+0t$
+0s$
+0r$
+b0 q$
+0p$
+b0 o$
+b0 n$
+0m$
+0l$
+0k$
+0j$
+0i$
+b0 h$
+0g$
+b0 f$
+b0 e$
+0d$
+0c$
+0b$
+0a$
+0`$
+b0 _$
+0^$
+b0 ]$
+b0 \$
+0[$
+0Z$
+0Y$
+0X$
+0W$
+b0 V$
+0U$
+b0 T$
+b0 S$
+0R$
+0Q$
+0P$
+0O$
+0N$
+b0 M$
+0L$
+b0 K$
+b0 J$
+0I$
+0H$
+0G$
+0F$
+0E$
+b0 D$
+0C$
+b0 B$
+b0 A$
+0@$
+b0 ?$
+b0 >$
+b0 =$
+b0 <$
+b0 ;$
+b0 :$
+b0 9$
+b0 8$
+b0 7$
+b0 6$
+b0 5$
+b0 4$
+b0 3$
+b0 2$
+b0 1$
+b1000 0$
+b0 /$
+b0 .$
+b0 -$
+b0 ,$
+b0 +$
+b0 *$
+b0 )$
+b0 ($
+b0 '$
+b0 &$
+b0 %$
+b0 $$
+b0 #$
+0"$
+0!$
+0~#
+0}#
+0|#
+b0 {#
+0z#
+b0 y#
+b0 x#
+0w#
+0v#
+0u#
+0t#
+0s#
+b0 r#
+0q#
+b0 p#
+b0 o#
+0n#
+0m#
+0l#
+0k#
+0j#
+b0 i#
+0h#
+b0 g#
+b0 f#
+0e#
+0d#
+0c#
+0b#
+0a#
+b0 `#
+0_#
+b0 ^#
+b0 ]#
+0\#
+0[#
+0Z#
+0Y#
+0X#
+b0 W#
+0V#
+b0 U#
+b0 T#
+0S#
+0R#
+0Q#
+0P#
+0O#
+b0 N#
+0M#
+b0 L#
+b0 K#
+0J#
+0I#
+0H#
+0G#
+0F#
+b0 E#
+0D#
+b0 C#
+b0 B#
+0A#
+0@#
+0?#
+0>#
+0=#
+b0 <#
+0;#
+b0 :#
+b0 9#
+08#
+b0 7#
+b0 6#
+b0 5#
+b0 4#
+b0 3#
+b0 2#
+b0 1#
+b0 0#
+b0 /#
+b0 .#
+b0 -#
+b0 ,#
+b0 +#
+b0 *#
+b0 )#
+b1000 (#
+b0 '#
+b0 &#
+b0 %#
+b0 $#
+b0 ##
+b0 "#
+b0 !#
+b0 ~"
+b0 }"
+b0 |"
+b0 {"
+b0 z"
+b0 y"
+0x"
+0w"
+0v"
+0u"
+0t"
+b0 s"
+0r"
+b0 q"
+b0 p"
+0o"
+0n"
+0m"
+0l"
+0k"
+b0 j"
+0i"
+b0 h"
+b0 g"
+0f"
+0e"
+0d"
+0c"
+0b"
+b0 a"
+0`"
+b0 _"
+b0 ^"
+0]"
+0\"
+0["
+0Z"
+0Y"
+b0 X"
+0W"
+b0 V"
+b0 U"
+0T"
+0S"
+0R"
+0Q"
+0P"
+b0 O"
+0N"
+b0 M"
+b0 L"
+0K"
+0J"
+0I"
+0H"
+0G"
+b0 F"
+0E"
+b0 D"
+b0 C"
+0B"
+0A"
+0@"
+0?"
+0>"
+b0 ="
+0<"
+b0 ;"
+b0 :"
+09"
+08"
+07"
+06"
+05"
+b0 4"
+03"
+b0 2"
+b0 1"
+00"
+b0 /"
+b0 ."
+b0 -"
+b0 ,"
+b0 +"
+b0 *"
+b0 )"
+b0 ("
+b0 '"
+b0 &"
+b0 %"
+b0 $"
+b0 #"
+b0 ""
+b0 !"
+b0 ~
+b0 }
+b0 |
+b0 {
+b0 z
+b0 y
+b0 x
+b0 w
+b0 v
+b0 u
+b0 t
+b0 s
+b0 r
+b0 q
+b0 p
+b0 o
+b0 n
+b0 m
+b0 l
+b0 k
+b0 j
+b0 i
+b0 h
+b0 g
+b0 f
+b0 e
+b0 d
+b0 c
+b0 b
+b0 a
+b0 `
+0_
+0^
+b0 ]
+b0 \
+b0 [
+b0 Z
+b0 Y
+b0 X
+0W
+0V
+b0 U
+b0 T
+1S
+0R
+b0 Q
+0P
+0O
+b0 N
+0M
+0L
+b0 K
+b0 J
+0I
+b0 H
+b0 G
+0F
+0E
+0D
+b0 C
+b0 B
+b0 A
+b0 @
+b0 ?
+1>
+0=
+b0 <
+b0 ;
+b0 :
+09
+08
+07
+06
+05
+04
+03
+b0 2
+01
+b0 0
+0/
+b0 .
+b0 -
+b110100 ,
+b0 +
+b0 *
+0)
+b0 (
+b0 '
+0&
+1%
+1$
+b0 #
+b0 "
+b110100 !
+$end
+#5000000
+0$
+#10000000
+1$
+#15000000
+0$
+#20000000
+1$
+#25000000
+0$
+#30000000
+1$
+#35000000
+0$
+#40000000
+1$
+#45000000
+0$
+#50000000
+1$
+#55000000
+0$
+#60000000
+1$
+#65000000
+0$
+#70000000
+1$
+#75000000
+0$
+#80000000
+1$
+#85000000
+0$
+#90000000
+1|3
+16
+15
+b11110 (
+b11110 +
+b10100 '
+b10100 *
+1)
+1&
+1$
+#95000000
+0$
+#100000000
+1!4
+1$
+#105000000
+0$
+#110000000
+0>
+1=
+1~3
+1$
+#115000000
+0$
+#120000000
+1$
+#125000000
+0$
+#130000000
+1$
+#135000000
+0$
+#140000000
+1$
+#145000000
+0$
+#150000000
+1$
+#150000001
