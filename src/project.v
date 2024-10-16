@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_um_snn_with_delays_paolaunisa ( 
+module tt_um_snn_with_delays_paolaunisa (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -22,7 +22,7 @@ module tt_um_snn_with_delays_paolaunisa (
     wire CS;
     wire MISO;
     wire [7:0] debug_output;
-    wire [1:0] output_spikes;
+    wire [8-1:0] output_spikes;
     wire input_ready; //additional input signal -- added 6Sep2024
     wire spi_instruction_done;  //additional support signal at protocol level -- added 6Sep2024
     wire data_valid_out; //additional debug signal -- added 6Sep2024
@@ -58,7 +58,7 @@ module tt_um_snn_with_delays_paolaunisa (
     assign uio_out[1:0]=2'b00;
     assign uio_out[2]=MISO;
     assign uio_out[3]=1'b0;
-    assign uio_out[5:4]=output_spikes;
+    assign uio_out[5:4]=output_spikes[1:0];
     assign uio_out[6]=data_valid_out;
     assign uio_out[7]=spi_instruction_done;
   
