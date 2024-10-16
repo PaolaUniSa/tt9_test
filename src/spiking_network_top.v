@@ -1,6 +1,6 @@
 module spiking_network_top 
  (
-    input wire system_clock,
+    input wire system_clock, 
     input wire rst_n,
     input wire SCLK,
     input wire MOSI,
@@ -28,7 +28,7 @@ module spiking_network_top
     wire [(8*8+8*8)*4-1:0] delays; // 832
     wire [7:0] debug_config_in;
     wire [(8+8)*6-1:0] membrane_potentials; 
-    wire [8-1:0] output_spikes_layer1;
+    wire [8-1:0] output_spikes_layer1,output_spikes_layer2;
     wire delay_clk;
     wire input_ready_sync;
     wire [(5+32+64+1)*8-1:0] all_data_out; //66*8-1
@@ -95,9 +95,11 @@ module spiking_network_top
         .debug_config_in(debug_config_in),
         .membrane_potentials(membrane_potentials),
         .output_spikes_layer1(output_spikes_layer1),
+        .output_spikes_layer2(output_spikes_layer2),
         .debug_output(debug_output)
     );
 
+    
     assign SNN_enable = input_spike_ready_sync & input_ready_sync;
 
     SNNwithDelays_top snn_inst (
@@ -113,9 +115,10 @@ module spiking_network_top
         .delays(delays),
         .membrane_potential_out(membrane_potentials),
         .output_spikes_layer1(output_spikes_layer1),
-        .output_spikes(output_spikes)
+        .output_spikes(output_spikes_layer2)
     );
-
+    
+    assign output_spikes = output_spikes_layer2;
     // Synchronizers
     synchronizer input_ready_sync_inst (
         .clk(system_clock),
