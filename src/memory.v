@@ -10,7 +10,7 @@ module memory //#(parameter M = 66, parameter N = 8)
 );
 
     // Declare the memory array
-    reg [7:0] mem [0:102-1];
+    reg [7:0] mem [0:163];//mem [0:102-1];
     integer j;
     
     reg [7:0] addr_reg_out;
